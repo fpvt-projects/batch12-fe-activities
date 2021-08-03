@@ -5,8 +5,60 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Survery-Form</title>
+
+    <link rel="stylesheet" href="/survey-form/resources/style.css">
 </head>
     <body>
+
+        <!-- Main-Container -->
+        <div id="mainContainer">
+            <!-- Survey-Form-Container -->
+            <div id="surveyContainer">
+                <div id="title">
+                    <h1 id="survey-title">Web Design and Functionality Survery Form</h1>
+                </div>
+                <div id="description">
+                    <h2 id="survey-description">Lorem ipsum dolor sit amet.</h2>
+                </div>
+                <div id="empty-detection"></div>
+                <div id="personal-details-input-form">
+                    <div id="left">
+                        <div id="fullNameContainer">
+                            <label for="fullName" id=fullNameLabel>Full Name:</label>
+                            <input type="text" id="fullName" placeholder="e. g. Francis Paolo V. Talan">
+                        </div>
+                        <!------------------------------------------------------------------------->
+                        <div id="emailContainer">
+                            <label for="email" id="emailLabel">Email:</label>
+                            <input type="text" id="email" placeholder="francispaolo.talan@gmail.com">
+                        </div>
+                        <!------------------------------------------------------------------------->
+                        <div id="genderContainer">
+                            <h6>Gender:</h6>
+                            <div id="maleContainer">
+                                <label for="gender" id='maleLabel'>Male</label>
+                                 <input type="radio" name="gender" id="male">
+                             </div>
+
+                            <div id="femaleContainer">
+                                <labe id="femaleLabel">Female</labe>
+                                <input type="radio" name="gender" id="female">
+                            </div>
+
+                            <div id="nottoContainer">
+                                <labe id="nottoLabel">Prefer not to say</labe>
+                                <input type="radio" name="gender" id="notto">
+                            </div>
+                        </div>
+
+                    </div>
+                    <div id="right"></div>
+                </div>
+                <div id="rating-form"></div>
+                <div id="satisfaction-form"></div>
+                <div id="submit-container"></div>
+            </div>
+        </div>
     
     </body>
 </html>

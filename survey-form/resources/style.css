@@ -1,5 +1,160 @@
+@font-face {
+    font-family: survey;
+    src: url(./Slenco-Black\ demo.otf);
+}
+
 * {
     padding: 0;
     margin: 0;
     box-sizing: border-box;
+    font-family: survey;
+}
+
+#mainContainer {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+}
+
+#surveyContainer {
+    height: 900px;
+    width: 800px;
+    background: #EEEEEE;
+    border-radius: 20px;
+    box-shadow: 0 10px 10px -4px #0d1e30;
+    display: flex;
+    flex-direction: column;
+}
+
+#title {
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: 10px;
+    /* margin-bottom: 5px; */
+}
+
+#description {
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: 5px;
+    margin-bottom: 10px;
+    font-size: 0.6vw;
+}
+
+#empty-detection {
+    width: 95%;
+    height: 3%;
+    border: 2px dashed red;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+/* PERSONAL-INPUT-FORM */
+
+#personal-details-input-form {
+    width: 95%;
+    height: 30%;
+    /* border: 2px dashed red; */
+    margin-top: 5px;
+    margin-left: auto;
+    margin-right: auto;
+    display: flex;
+    justify-content: space-between;
+}
+
+#left {
+   height: 100%;
+    width:  48%;
+    /* border: 2px dashed red; */
+    /* background: white; */
+}
+
+#fullNameLabel {
+    text-transform: uppercase;
+    font-size: 0.6vw;
+}
+
+#fullName {
+    width: 100%;
+    /* border-top: hidden;
+    border-right: hidden;
+    border-left: hidden;
+    border-bottom: 1px solid #EFB7B7; */
+    line-height: 25px;
+}
+
+#fullNameContainer {
+    margin-bottom: 20px;
+}
+
+#emailLabel {
+    text-transform: uppercase;
+    font-size: 0.6vw;
+}
+
+#email {
+    width: 100%;
+    /* border-top: hidden;
+    border-right: hidden;
+    border-left: hidden; */
+    line-height: 25px;
+}
+
+#right {
+    height: 100%;
+    width:  48%;
+    border: 2px dashed red;
+}
+
+/* RATING-FORM */
+
+#rating-form {
+    height: 10%;
+    width: 95%;
+    border: 2px dashed red;
+    margin-top: 5px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+/* SATISFACTION-FORM */
+
+#satisfaction-form {
+    height: 40%;
+    width: 95%;
+    border: 2px dashed red;
+    margin-top: 5px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+/* SUBMIT-CONTAINER */
+
+#submit-container {
+    height: 5%;
+    width: 95%;
+    border: 2px dashed red;
+    margin-top: 5px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+#genderContainer {
+    width: 100%;
+    display: flex;
+    margin-top: 25px;
+    display: inline-block;
+}
+
+#maleContainer, #femaleContainer, #nottoContainer {
+    padding-left: 18px;
+}
+
+#male, #female, #notto {
+    margin-left: 5px;
+}
+
+h6 {
+    width: 100%;
 }
