@@ -4,61 +4,159 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Survery-Form</title>
+    <title>FPVT Survey-Form</title>
 
     <link rel="stylesheet" href="/survey-form/resources/style.css">
 </head>
     <body>
-
-        <!-- Main-Container -->
         <div id="mainContainer">
-            <!-- Survey-Form-Container -->
-            <div id="surveyContainer">
-                <div id="title">
-                    <h1 id="survey-title">Web Design and Functionality Survery Form</h1>
-                </div>
-                <div id="description">
-                    <h2 id="survey-description">Lorem ipsum dolor sit amet.</h2>
-                </div>
-                <div id="empty-detection"></div>
-                <div id="personal-details-input-form">
-                    <div id="left">
-                        <div id="fullNameContainer">
-                            <label for="fullName" id=fullNameLabel>Full Name:</label>
-                            <input type="text" id="fullName" placeholder="e. g. Francis Paolo V. Talan">
-                        </div>
-                        <!------------------------------------------------------------------------->
-                        <div id="emailContainer">
-                            <label for="email" id="emailLabel">Email:</label>
-                            <input type="text" id="email" placeholder="francispaolo.talan@gmail.com">
-                        </div>
-                        <!------------------------------------------------------------------------->
-                        <div id="genderContainer">
-                            <h6>Gender:</h6>
-                            <div id="maleContainer">
-                                <label for="gender" id='maleLabel'>Male</label>
-                                 <input type="radio" name="gender" id="male">
-                             </div>
-
-                            <div id="femaleContainer">
-                                <labe id="femaleLabel">Female</labe>
-                                <input type="radio" name="gender" id="female">
-                            </div>
-
-                            <div id="nottoContainer">
-                                <labe id="nottoLabel">Prefer not to say</labe>
-                                <input type="radio" name="gender" id="notto">
-                            </div>
-                        </div>
-
+            <form>
+                <div id="leftContainer">
+                    <div id="titleContainer">
+                        <h1 id="title">Website Design & Functionality Survey</h1>
                     </div>
-                    <div id="right"></div>
+                    <div id="descriptionContainer">
+                        <h3 id="description">Lorem ipsum dolor sit amet consectetur.</h3>
+                    </div>
+                    <div id="notificationContainer">
+                        <h5 id="notification">Lorem ipsum dolor, sit amet consectetur adipisicing elit. Quas, ipsum!</h5>
+                    </div>
+                    <div id="inputContainer">
+                        <div id="inputInstructions">
+                            <h6 id="instruction_a">The Followings record is kept and used for the improvement of the website.</h6>
+                        </div>
+                        <div id="innerInputContainer">
+                            <div id="leftInput">
+                                <div id="fullnameContainer">
+                                    <input type="text" id="fullName" required='true' placeholder="Francis Paolo V. Talan">
+                                    <label for="fullName" id="fullname-Label">Full Name</label>
+                                </div>
+                                <div id="emailContainer">
+                                    <input type="email" id="email" required placeholder="francispaolo.talan@gmail.com">
+                                    <label for="email" id="email-Label">Email</label>
+                                </div>
+                                <div id="numberContainer">
+                                    <div id="phoneContainer">
+                                        <input type="number" id="phonenumber" required placeholder="09179999999">
+                                        <label for="phonenumber" id="phonenumber-label">Phone Number</label>
+                                    </div>
+                                    <div id="ageContainer">
+                                        <input type="number"  required name="age" id="age">
+                                        <label for="age" id="age-label">Age</label>
+                                    </div>
+                                </div>
+                            </div>
+                            <div id="rightInput">
+                                <div id="countryContainer">
+                                    <h6 id="select">Country</h6>
+                                    <select name="country" id="dropdown">
+                                        <option selected='selected' disabled value="">Select Country</option>
+                                        <option value="PH">Philippines</option>
+                                        <option value="SG">Singapore</option>
+                                        <option value="NZ">New Zealand</option>
+                                        <option value="AUS">Australia</option>
+                                    </select>
+                                </div>
+                                <div id="genderContainer">
+                                    <h6 id="gender">SEX:</h6>
+                                    <div id="genderinnerContainer">
+                                        <input type="radio" name="sex" id="male">
+                                        <label id="male-label">Male</label>
+                                        <input type="radio" name="sex" id="female">
+                                        <label for="female" id="female-label">Female</label>
+                                        <input type="radio" name="sex" id="notsay">
+                                        <label for="notsay" id="notsay-label">Prefer not to say</label>
+                                    </div>    
+                                </div>
+                                <div id="referenceContainer">
+                                    <h6 id='where'>Where did you hear us from?</h6>
+                                    <div id="optionContainer">
+                                        <div id="optionset1">
+                                            <input type="checkbox" name="reference" id="facebook">
+                                            <label for="facebook" id="facebook-label">Facebook</label>
+                                            <input type="checkbox" name="reference" id="linkedin">
+                                            <label for="linkedin" id="linkedin-label">Linkedin</label>
+                                            <input type="checkbox" name="reference" id="Google">
+                                            <label for="Google" id="Google-label">Google</label>
+                                        </div>
+                                        <div id="optionset2">
+                                            <input type="checkbox" name="reference" id="facebook">
+                                            <label for="facebook" id="facebook-label">Discord</label>
+                                            <input type="checkbox" name="reference" id="linkedin">
+                                            <label for="linkedin" id="linkedin-label">Twitter</label>
+                                            <input type="checkbox" name="reference" id="Google">
+                                            <label for="Google" id="Google-label">Hotmail</label>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>   
+                    </div>
+
+                    <div id="linkContainer">
+                        <label for="website-link" id="website-label">Website URL:</label>
+                        <input type="text" required id='website-link'>
+                    </div>
+                  
+                    <div id="ratingContainer">
+                        <p>Overall Rating:</p>
+                    </div>
+
+                    <div id="websiterating">
+                        <p>Rate the website based on the following aspects</p>
+                        <p>subheading</p>
+                        <div id="choices">
+                            <div id="empty">*</div>
+                            <div id="poor">Poor</div>
+                            <div id="excellent">Excellent</div>
+                        </div>
+                        <div id="rateContainer">
+                            <div id="question1Container">
+                                <div id="question1">Aesthetics</div>
+                                <div id="choicesContainer">
+                                    <input type="radio" name="answer1" id="">
+                                    <input type="radio" name="answer1" id="">
+                                    <input type="radio" name="answer1" id="">
+                                    <input type="radio" name="answer1" id="">
+                                    <input type="radio" name="answer1" id="">
+                                </div>
+                            </div>
+                            <div id="question2Container">
+                                <div id="question2">Functionality</div>
+                                <div id="choicesContainer">
+                                    <input type="radio" name="answer2" id="">
+                                    <input type="radio" name="answer2" id="">
+                                    <input type="radio" name="answer2" id="">
+                                    <input type="radio" name="answer2" id="">
+                                    <input type="radio" name="answer2" id="">
+                                </div>
+                            </div>
+                            <div id="question3Container">
+                                <div id="question3">Usability</div>
+                                <div id="choicesContainer">
+                                    <input type="radio" name="answer3" id="">
+                                    <input type="radio" name="answer3" id="">
+                                    <input type="radio" name="answer3" id="">
+                                    <input type="radio" name="answer3" id="">
+                                    <input type="radio" name="answer3" id="">
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div id="textboxContainer">
+                        <p id='textbox-label'>Any suggestions that could help improve the website (Optional)</p>
+                        <textarea name=""  id="" cols="40" rows="5"></textarea>
+                    </div>
+
+                    <div id="submitContainer">
+                        <input type="submit" name='submit 'value="Submit" id='submit'>
+                    </div>
+                    
                 </div>
-                <div id="rating-form"></div>
-                <div id="satisfaction-form"></div>
-                <div id="submit-container"></div>
-            </div>
+                <div id="rightContainer"></div>
+            </form> 
         </div>
-    
+        <script src="/survey-form/main.js"></script>
     </body>
 </html>
