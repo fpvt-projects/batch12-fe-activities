@@ -32,12 +32,12 @@
                                     <label for="fullName" id="fullname-Label">Full Name</label>
                                 </div>
                                 <div id="emailContainer">
-                                    <input type="email" id="email" name='email' required placeholder="francispaolo.talan@gmail.com">
+                                    <input type="email" id="email" pattern="[a-zA-Z0-9.-_]{1,}@[a-zA-Z.-]{2,}[.]{1}[a-zA-Z]{2,}" name='email' required placeholder="francispaolo.talan@gmail.com">
                                     <label for="email" id="email-Label">Email</label>
                                 </div>
                                 <div id="numberContainer">
                                     <div id="phoneContainer">
-                                        <input type="number" id="phonenumber" name='phonenumber' required placeholder="09179999999">
+                                        <input type="number" maxlength=11" id="phonenumber" name='phonenumber' required placeholder="09179999999">
                                         <label for="phonenumber" id="phonenumber-label">Phone Number</label>
                                     </div>
                                     <div id="ageContainer">
