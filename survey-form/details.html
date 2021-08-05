@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Survey Validation</title>
+</head> 
+    <body>
+        <div id="validationContainer">
+            <h1 id="name"></h1>
+            <div id="email"></div>
+            <div id="phonenumber"></div>
+            <div id="age"></div>
+            <div id="country"></div>
+            <div id="gender"></div>
+            <div id="reference"></div>
+            <div id="weblink">'</div>
+            <div id="overallrating"></div>
+        </div>
+
+        <script type="text/javascript">
+            var url_string = window.location.href
+            var url = new URL(url_string);
+            var name = url.searchParams.get("fullName");
+            var email = url.searchParams.get("email");
+            var gender = url.searchParams.get("sex");
+
+            document.getElementById("name").textContent += name;
+            document.getElementById("email").textContent += email;
+            document.getElementById("gender").textContent += gender;
+         
+        </script>    
+    </body>
+</html>

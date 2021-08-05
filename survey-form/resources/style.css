@@ -375,14 +375,24 @@ h6 {
     font-size: 0.5vw;
 }
 
-p {
+#aspects {
     font-size: 0.6vw;
     font-weight: bold;
-    margin-bottom: 0.5vh;
+    /* margin-bottom: 0.5vh; */
+    margin-left: 0.5vw;
+}
+
+#subheading {
+    font-size: 0.5vw;
+    font-weight: bold;
+    margin-bottom: 1vh;
     margin-left: 0.5vw;
 }
 
 #textbox-label {
     font-size: 0.5vw;
+    font-weight: bold;
+    margin-bottom: 0.5vh;
+    margin-left: 0.5vw;
 }
 
