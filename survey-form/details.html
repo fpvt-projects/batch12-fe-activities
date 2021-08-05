@@ -5,30 +5,145 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Survey Validation</title>
+
+    <!-- Stylesheet -->
+    <style>
+        @font-face {
+            font-family: receipt;
+            src: url(../survey-form/resources/Merchant\ Copy.ttf);
+        }
+        *,
+        ::before,
+        ::after {
+            padding: 0;
+            margin: 0;
+            box-sizing: border-box;
+            font-family: receipt;
+            font-size: 1vw;
+            /* text-transform: uppercase; */
+        }
+
+        body {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            height: 100vh;
+        }
+
+       #validationContainer {
+           width: 500px;
+           height: 80vh;
+           background: #F0FFFF;
+           /* margin-left: auto;
+           margin-right: auto; */
+           padding: 1vw;
+           text-transform: uppercase;
+           font-family: 'Poppins', sans-serif;
+           border: 1px solid #B2BEB5;
+       }
+
+       #fname {
+           margin-left: 0.4vw;
+       }
+
+       #validation-name, #validation-email, #validation-phonenumber,
+       #validation-age , #validation-country, #validation-gender,
+       #validation-reference, #validation-url {
+           display: flex;
+           margin: 1vh;
+       }
+
+       #validation-rating, #validation-textbox {
+           display: flex;
+           flex-direction: column;
+           margin: 1vh;
+           height: 9%;
+           justify-content: space-evenly;
+        }
+
+       h6  {
+           margin-left: 0.5vw;
+       }
+
+    </style>
+
 </head> 
     <body>
         <div id="validationContainer">
-            <h1 id="name"></h1>
-            <div id="email"></div>
-            <div id="phonenumber"></div>
-            <div id="age"></div>
-            <div id="country"></div>
-            <div id="gender"></div>
-            <div id="reference"></div>
-            <div id="weblink">'</div>
-            <div id="overallrating"></div>
+           <div id="validation-name">
+               <h6>Name :</h6>
+               <h6 id="fname-placement"></h6>
+            </div>
+            <div id="validation-email">
+                <h6>e-mail :</h6>
+                <h6 id="email-placement"></h6>
+             </div>
+             <div id="validation-phonenumber">
+                <h6>phone-number :</h6>
+                <h6 id="phonenumber-placement"></h6>
+             </div>
+             <div id="validation-age">
+                <h6>age :</h6>
+                <h6 id="age-placement"></h6>
+             </div>
+             <div id="validation-country">
+                <h6>Country :</h6>
+                <h6 id="country-placement"></h6>
+             </div><div id="validation-gender">
+                <h6>SEX :</h6>
+                <h6 id="gender-placement"></h6>
+             </div>
+             <div id="validation-reference">
+                <h6>reference :</h6>
+                <h6 id="reference-placement"></h6>
+             </div>
+             <div id="validation-url">
+                <h6>url :</h6>
+                <h6 id="url-placement"></h6>
+             </div>
+             <div id="validation-rating">
+                 <h6>Aesthetic : <span id="aesthetic-placement"></span></h6>
+                 <h6>Functionality : <span id="functionality-placement"></span></h6>
+                 <h6>Usability : <span id="usability-placement"></span></h6>
+             </div>
+             <div id="validation-textbox">
+                <h6>Comments :</h6>
+                <h6 id="textbox-placement"></h6>
+             </div>
+
+            </div> 
         </div>
 
+        <!-- JavaScript -->
         <script type="text/javascript">
             var url_string = window.location.href
             var url = new URL(url_string);
-            var name = url.searchParams.get("fullName");
-            var email = url.searchParams.get("email");
-            var gender = url.searchParams.get("sex");
+            var name = url.searchParams.get("fullname");
+            var emailref = url.searchParams.get("email");
+            var phone = url.searchParams.get('phonenumber')
+            var ageref = url.searchParams.get('age')
+            // var countryref = url.searchParams.get('country')
+            var genderref = url.searchParams.get('sex');
+            var referenceref = url.searchParams.getAll('reference');
+            var urlref = url.searchParams.get('web-url')
+            var aesthetic = url.searchParams.get('answer1');
+            var functional = url.searchParams.get('answer2');
+            var usable = url.searchParams.get('answer3');
+            var text = url.searchParams.get('textbox');
 
-            document.getElementById("name").textContent += name;
-            document.getElementById("email").textContent += email;
-            document.getElementById("gender").textContent += gender;
+            document.getElementById("fname-placement").textContent += name;
+            document.getElementById("email-placement").textContent += emailref;
+            document.getElementById('phonenumber-placement').textContent += phone;
+            document.getElementById('age-placement').textContent += ageref;
+            // document.getElementById('country-placement').textContet += countryref;
+            document.getElementById('gender-placement').textContent += genderref;
+            document.getElementById('reference-placement').textContent += referenceref;
+            document.getElementById('url-placement').textContent += urlref;
+            document.getElementById('aesthetic-placement').textContent += aesthetic;
+            document.getElementById('functionality-placement').textContent += functional;
+            document.getElementById('usability-placement').textContent += usable;
+            document.getElementById('textbox-placement').textContent += text;
+
          
         </script>    
     </body>

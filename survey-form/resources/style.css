@@ -1,4 +1,8 @@
 @import url('https://fonts.googleapis.com/css2?family=Poppins&display=swap');
+@font-face {
+    font-family: wrestlemanie;
+    src: url(../resources/BrokenChalk.ttf);
+}
 
 *,
 ::before,
@@ -356,9 +360,9 @@ form {
 }
 
 #submitContainer {
-    height: 8%;
+    height: 12.3%;
     display: flex;
-    justify-content: center;
+    justify-content:space-around;
     align-items: center;
 }
 
@@ -367,6 +371,11 @@ form {
 }
 
 #submit {
+    height: 3vh;
+    width: 60%;
+}
+
+#reset {
     height: 3vh;
     width: 5vw;
 }
@@ -394,5 +403,20 @@ h6 {
     font-weight: bold;
     margin-bottom: 0.5vh;
     margin-left: 0.5vw;
+}
+
+#rightContainer {
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+#logo {
+    writing-mode: vertical-rl;
+    height: 100%;
+    font-size: 13vw;
+    font-family:  wrestlemanie;
+    color: white;
 }
 

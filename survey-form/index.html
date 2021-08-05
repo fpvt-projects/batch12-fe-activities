@@ -10,7 +10,7 @@
 </head>
     <body>
         <div id="mainContainer">
-            <form action='../survey-form/details.html' method="GET">
+            <form action='../survey-form/details.html' method="GET"  id='formform'>
                 <div id="leftContainer">
                     <div id="titleContainer">
                         <h1 id="title">Website Design & Functionality Survey</h1>
@@ -28,20 +28,20 @@
                         <div id="innerInputContainer">
                             <div id="leftInput">
                                 <div id="fullnameContainer">
-                                    <input type="text" id="fullName" required='true' placeholder="Francis Paolo V. Talan">
+                                    <input type="text" id="fullName" name='fullname' required='true' placeholder="Francis Paolo V. Talan">
                                     <label for="fullName" id="fullname-Label">Full Name</label>
                                 </div>
                                 <div id="emailContainer">
-                                    <input type="email" id="email" required placeholder="francispaolo.talan@gmail.com">
+                                    <input type="email" id="email" name='email' required placeholder="francispaolo.talan@gmail.com">
                                     <label for="email" id="email-Label">Email</label>
                                 </div>
                                 <div id="numberContainer">
                                     <div id="phoneContainer">
-                                        <input type="number" id="phonenumber" required placeholder="09179999999">
+                                        <input type="number" id="phonenumber" name='phonenumber' required placeholder="09179999999">
                                         <label for="phonenumber" id="phonenumber-label">Phone Number</label>
                                     </div>
                                     <div id="ageContainer">
-                                        <input type="number"  required name="age" id="age">
+                                        <input type="number" required name="age" id="age">
                                         <label for="age" id="age-label">Age</label>
                                     </div>
                                 </div>
@@ -60,11 +60,11 @@
                                 <div id="genderContainer">
                                     <h6 id="gender">SEX:</h6>
                                     <div id="genderinnerContainer">
-                                        <input type="radio" name="sex" id="male">
+                                        <input type="radio" name="sex" id="male" value='Male'>
                                         <label id="male-label">Male</label>
-                                        <input type="radio" name="sex" id="female">
+                                        <input type="radio" name="sex" id="female" value='Female'>
                                         <label for="female" id="female-label">Female</label>
-                                        <input type="radio" name="sex" id="notsay">
+                                        <input type="radio" name="sex" id="notsay" value='Prefer'>
                                         <label for="notsay" id="notsay-label">Prefer not to say</label>
                                     </div>    
                                 </div>
@@ -72,20 +72,20 @@
                                     <h6 id='where'>Where did you hear us from?</h6>
                                     <div id="optionContainer">
                                         <div id="optionset1">
-                                            <input type="checkbox" name="reference" id="facebook">
+                                            <input type="checkbox" value='Facebook' name="reference" id="facebook">
                                             <label for="facebook" id="facebook-label">Facebook</label>
-                                            <input type="checkbox" name="reference" id="linkedin">
+                                            <input type="checkbox" value='LinkedIn' name="reference" id="linkedin">
                                             <label for="linkedin" id="linkedin-label">Linkedin</label>
-                                            <input type="checkbox" name="reference" id="Google">
+                                            <input type="checkbox" value='Google' name="reference" id="Google">
                                             <label for="Google" id="Google-label">Google</label>
                                         </div>
                                         <div id="optionset2">
-                                            <input type="checkbox" name="reference" id="facebook">
+                                            <input type="checkbox" value='Discord' name="reference" id="facebook">
                                             <label for="facebook" id="facebook-label">Discord</label>
-                                            <input type="checkbox" name="reference" id="linkedin">
+                                            <input type="checkbox" value='Twitter' name="reference" id="linkedin">
                                             <label for="linkedin" id="linkedin-label">Twitter</label>
                                             <input type="checkbox" name="reference" id="Google">
-                                            <label for="Google" id="Google-label">Hotmail</label>
+                                            <label for="Google" value='Hotmail' id="Google-label">Hotmail</label>
                                         </div>
                                     </div>
                                 </div>
@@ -94,13 +94,13 @@
                     </div>
 
                     <div id="linkContainer">
-                        <label for="website-link" id="website-label">Website URL:</label>
-                        <input type="text" required id='website-link'>
+                        <label for="website-link"  id="website-label">Website URL:</label>
+                        <input type="text" name='web-url' required id='website-link'>
                     </div>
                   
-                    <div id="ratingContainer">
+                    <!-- <div id="ratingContainer">
                         <p>Overall Rating:</p>
-                    </div>
+                    </div> -->
 
                     <div id="websiterating">
                         <p id=aspects>Rate the website based on the following aspects</p>
@@ -114,31 +114,31 @@
                             <div id="question1Container">
                                 <div id="question1">Aesthetics</div>
                                 <div id="choicesContainer">
-                                    <input type="radio" name="answer1" id="">
-                                    <input type="radio" name="answer1" id="">
-                                    <input type="radio" name="answer1" id="">
-                                    <input type="radio" name="answer1" id="">
-                                    <input type="radio" name="answer1" id="">
+                                    <input type="radio" name="answer1" id=""  value='Poor'>
+                                    <input type="radio" name="answer1" id=""  value='Meh'>
+                                    <input type="radio" name="answer1" id=""  value='Ok'>
+                                    <input type="radio" name="answer1" id=""  value='Prety Good'>
+                                    <input type="radio" name="answer1" id=""  value='Execelent'>
                                 </div>
                             </div>
                             <div id="question2Container">
                                 <div id="question2">Functionality</div>
                                 <div id="choicesContainer">
-                                    <input type="radio" name="answer2" id="">
-                                    <input type="radio" name="answer2" id="">
-                                    <input type="radio" name="answer2" id="">
-                                    <input type="radio" name="answer2" id="">
-                                    <input type="radio" name="answer2" id="">
+                                    <input type="radio" name="answer2" id=""  value='Poor'>
+                                    <input type="radio" name="answer2" id=""  value='Meh''>
+                                    <input type="radio" name="answer2" id=""  value='Ok'>
+                                    <input type="radio" name="answer2" id=""  value='Prety Good'>
+                                    <input type="radio" name="answer2" id=""  value='Execelent'>
                                 </div>
                             </div>
                             <div id="question3Container">
                                 <div id="question3">Usability</div>
                                 <div id="choicesContainer">
-                                    <input type="radio" name="answer3" id="">
-                                    <input type="radio" name="answer3" id="">
-                                    <input type="radio" name="answer3" id="">
-                                    <input type="radio" name="answer3" id="">
-                                    <input type="radio" name="answer3" id="">
+                                    <input type="radio" name="answer3" id="" value='Poor'>
+                                    <input type="radio" name="answer3" id="" value='Meh'>
+                                    <input type="radio" name="answer3" id="" value='Ok'>
+                                    <input type="radio" name="answer3" id="" value='Prety Good'>
+                                    <input type="radio" name="answer3" id="" value='Execelent'>
                                 </div>
                             </div>
                         </div>
@@ -146,17 +146,25 @@
 
                     <div id="textboxContainer">
                         <p id='textbox-label'>Any suggestions that could help improve the website (Optional)</p>
-                        <textarea name=""  id="" cols="40" rows="4"></textarea>
+                        <textarea name="textbox"  id="" cols="40" rows="4"></textarea>
                     </div>
 
                     <div id="submitContainer">
                         <input type="submit" name='submit 'value="Submit" id='submit'>
+                        <input type="button" onclick="resetForm()" value='Clear' id='reset'>
+                        
                     </div>
                     
                 </div>
-                <div id="rightContainer"></div>
+                <div id="rightContainer">
+                    <div id="logo">FPVT</div>
+                </div>
             </form> 
         </div>
-        <script src="/survey-form/main.js"></script>
+        <script>
+            function resetForm () {
+                document.getElementById('formform').reset();
+            }
+        </script>
     </body>
 </html>
