@@ -125,7 +125,7 @@
             // var countryref = url.searchParams.get('country')
             var genderref = url.searchParams.get('sex');
             var referenceref = url.searchParams.getAll('reference');
-            var urlref = url.searchParams.get('web-url')
+            var urlref = url.searchParams.get('web-url');
             var aesthetic = url.searchParams.get('answer1');
             var functional = url.searchParams.get('answer2');
             var usable = url.searchParams.get('answer3');
@@ -148,3 +148,10 @@
         </script>    
     </body>
 </html>
+
+
+<h6>Name :</h6>
+
+<h6 id="fname-placement"></h6>
+var name = url.searchParams.get("fullname"):
+document.getElementById("fname-placement").textContent += name;
