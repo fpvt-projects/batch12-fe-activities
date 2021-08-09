@@ -3,27 +3,3 @@
     margin: 0;
     box-sizing: border-box;
 }
-
-header {
-    height: 100vh;
-    width: 100vw;
-    background: #EEEEEE;
-    ;
-}
-
-
-/* TITLE */
-#titleContainer {
-   height: 50vh;
-   width: 30vw;
-   background: #141E61;
-   margin: auto;
-   position: absolute;
-   top: 0; left: 0; bottom: 0; right: 0;
-}
-
-#LOGO {
-    margin: auto;
-    position: absolute;
-    top: 0; left: 0; bottom: 0; right: 0
-}

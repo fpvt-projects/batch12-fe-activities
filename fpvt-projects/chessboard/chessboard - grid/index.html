@@ -1,0 +1,206 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Chessboard (Grid)</title>
+
+    <!-- Internal-Stylesheet -->
+    <style>
+        * {
+            padding: 0;
+            margin: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            display: grid;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            width: 100vw;
+        }
+
+        #mainContainer {
+            height: 80vh;
+            width: 45vw;
+            border: 1px solid black;
+            display: grid;
+            grid-template-columns: repeat(8, 1fr);
+            grid-template-rows: repeat(8, 1fr);
+        }
+
+        .white {
+            background: whitesmoke;
+        }
+
+        .black {
+            background: brown;
+        }
+
+        .box {
+            display: grid;
+            align-items: center;
+            justify-content: center;
+            height: auto;
+            width: auto;
+        }
+
+        img {
+            height: 5vh;
+            width: 5vw;
+        }
+    </style>
+</head>
+    <body>
+        <!-- Main-Container -->
+        <div id="mainContainer">
+
+            <!-- 1st-Layer -->
+            <div class="box A1 white">
+                <img src="../chessboard - grid/resources/black-rook.svg" alt="">
+            </div>
+            <div class="box A2 black">
+                <img src="../chessboard - grid/resources/black-knight.svg" alt="">
+            </div>
+            <div class="box A3 white">
+                <img src="../chessboard - grid/resources/black-bishop.svg" alt="" srcset="">
+            </div>
+            <div class="box A4 black">
+                <img src="../chessboard - grid/resources/black-king.svg" alt="">
+            </div>
+            <div class="box A5 white">
+                <img src="../chessboard - grid/resources/black-queen.svg" alt="">
+            </div>
+            <div class="box A6 black">
+                <img src="../chessboard - grid/resources/black-bishop.svg" alt="" srcset="">
+            </div>
+            <div class="box A7 white">
+                <img src="../chessboard - grid/resources/black-knight.svg" alt="">
+            </div>
+            <div class="box A8 black">
+                <img src="../chessboard - grid/resources/black-rook.svg" alt="">
+            </div>
+
+            <!-- 2nd-Layer -->
+            <div class="box B1 black">
+                <img src="../chessboard - grid/resources/black-pawn.svg" alt="">
+            </div>
+            <div class="box B2 white">
+                <img src="../chessboard - grid/resources/black-pawn.svg" alt="">
+            </div>
+            <div class="box B3 black">
+                <img src="../chessboard - grid/resources/black-pawn.svg" alt="">
+            </div>
+            <div class="box B4 white">
+                <img src="../chessboard - grid/resources/black-pawn.svg" alt="">
+            </div>
+            <div class="box B5 black">
+                <img src="../chessboard - grid/resources/black-pawn.svg" alt="">
+            </div>
+            <div class="box B6 white">
+                <img src="../chessboard - grid/resources/black-pawn.svg" alt="">
+            </div>
+            <div class="box B7 black">
+                <img src="../chessboard - grid/resources/black-pawn.svg" alt="">
+            </div>
+            <div class="box B8 white">
+                <img src="../chessboard - grid/resources/black-pawn.svg" alt="">
+            </div>
+
+            <!-- 3rd-Layer -->
+            <div class="box C1 white"></div>
+            <div class="box C2 black"></div>
+            <div class="box C3 white"></div>
+            <div class="box C4 black"></div>
+            <div class="box C5 white"></div>
+            <div class="box C6 black"></div>
+            <div class="box C7 white"></div>
+            <div class="box C8 black"></div>
+
+            <!-- 4th-Layer -->
+            <div class="box D1 black"></div>
+            <div class="box D2 white"></div>
+            <div class="box D3 black"></div>
+            <div class="box D4 white"></div>
+            <div class="box D5 black"></div>
+            <div class="box D6 white"></div>
+            <div class="box D7 black"></div>
+            <div class="box D8 white"></div>
+
+            <!-- 5th-Layer -->
+            <div class="box E1 white"></div>
+            <div class="box E2 black"></div>
+            <div class="box E3 white"></div>
+            <div class="box E4 black"></div>
+            <div class="box E5 white"></div>
+            <div class="box E6 black"></div>
+            <div class="box E7 white"></div>
+            <div class="box E8 black"></div>
+
+            <!-- 6th-Layer -->
+            <div class="box F1 black"></div>
+            <div class="box F2 white"></div>
+            <div class="box F3 black"></div>
+            <div class="box F4 white"></div>
+            <div class="box F5 black"></div>
+            <div class="box F6 white"></div>
+            <div class="box F7 black"></div>
+            <div class="box F8 white"></div>
+
+            <!-- 7th-Layer -->
+            <div class="box G1 white">
+                <img src="../chessboard - grid/resources/white-pawn.svg" alt="">
+            </div>
+            <div class="box G2 black">
+                <img src="../chessboard - grid/resources/white-pawn.svg" alt="">
+            </div>
+            <div class="box G3 white">
+                <img src="../chessboard - grid/resources/white-pawn.svg" alt="">
+            </div>
+            <div class="box G4 black">
+                <img src="../chessboard - grid/resources/white-pawn.svg" alt="">
+            </div>
+            <div class="box G5 white">
+                <img src="../chessboard - grid/resources/white-pawn.svg" alt="">
+            </div>
+            <div class="box G6 black">
+                <img src="../chessboard - grid/resources/white-pawn.svg" alt="">
+            </div>
+            <div class="box G7 white">
+                <img src="../chessboard - grid/resources/white-pawn.svg" alt="">
+            </div>
+            <div class="box G8 black">
+                <img src="../chessboard - grid/resources/white-pawn.svg" alt="">
+            </div>
+
+            <!-- 8th-Layer -->
+            <div class="box H1 black">
+                <img src="../chessboard - grid/resources/white-rook.svg" alt="">
+            </div>
+            <div class="box H2 white">
+                <img src="../chessboard - grid/resources/white-knight.svg" alt="">
+            </div>
+            <div class="box H3 black">
+                <img src="../chessboard - grid/resources/white-bishop.svg" alt="">
+            </div>
+            <div class="box H4 white">
+                <img src="../chessboard - grid/resources/white-king.svg" alt="">
+            </div>
+            <div class="box H5 black">
+                <img src="../chessboard - grid/resources/white-queen.svg" alt="">
+            </div>
+            <div class="box H6 white">
+                <img src="../chessboard - grid/resources/white-bishop.svg" alt="">
+            </div>
+            <div class="box H7 black">
+                <img src="../chessboard - grid/resources/white-knight.svg" alt="">
+            </div>
+            <div class="box H8 white">
+                <img src="../chessboard - grid/resources/white-rook.svg" alt="">
+            </div>
+        </div>
+    
+    </body>
+</html>
