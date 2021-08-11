@@ -1,0 +1,245 @@
+@font-face {
+  font-family: primaryFont;
+  src: url("./assets/fonts/Cocogoose Pro-trial.ttf");
+}
+
+@font-face {
+  font-family: secondayFont;
+  src: url("./assets/fonts/CaviarDreams.ttf");
+}
+
+* {
+  padding: 0;
+  margin: 0;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+}
+
+header {
+  height: 100%;
+  width: 9.5%;
+  position: fixed;
+  left: 0;
+  top: 0;
+  background: #171010;
+}
+
+header #header {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  height: 12%;
+  width: 100%;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  line-height: 1.5vw;
+}
+
+header #header #brand {
+  color: white;
+  text-transform: uppercase;
+  font-size: 0.8vw;
+  font-family: primaryFont;
+}
+
+header #nav-bar {
+  height: 35%;
+  width: 100%;
+}
+
+header #nav-bar #nav-links {
+  height: 100%;
+  list-style: none;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -ms-flex-pack: distribute;
+      justify-content: space-around;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+header #nav-bar #nav-links #nav-link, header #nav-bar #nav-links a {
+  color: white;
+  text-decoration: none;
+  font-size: 0.7vw;
+  text-transform: uppercase;
+  font-family: secondayFont;
+}
+
+main {
+  background: white;
+  height: 100vh;
+  max-width: 100%;
+}
+
+main #content {
+  margin-left: 9.7vw;
+  height: 100%;
+  max-width: 100%;
+  display: -ms-grid;
+  display: grid;
+  gap: 0.3vw;
+  -ms-grid-rows: (1fr)[8];
+  -ms-grid-columns: (1fr)[8];
+      grid-template: repeat(8, 1fr)/repeat(8, 1fr);
+}
+
+main #content .mainContent {
+  background: black;
+}
+
+main #content .A {
+  -ms-grid-column: 1;
+  -ms-grid-column-span: 5;
+  grid-column: 1 / 6;
+  -ms-grid-row: 1;
+  -ms-grid-row-span: 4;
+  grid-row: 1 / 5;
+}
+
+main #content .A .kbClip {
+  height: 100%;
+  width: 100%;
+  -o-object-fit: cover;
+     object-fit: cover;
+}
+
+main #content .B {
+  -ms-grid-column: 6;
+  -ms-grid-column-span: 3;
+  grid-column: 6 / 9;
+  -ms-grid-row: 1;
+  -ms-grid-row-span: 4;
+  grid-row: 1 /5;
+}
+
+main #content .B .kbImage {
+  height: 100%;
+  width: 100%;
+  -o-object-fit: cover;
+     object-fit: cover;
+}
+
+main #content .C {
+  -ms-grid-column: 1;
+  -ms-grid-column-span: 2;
+  grid-column: 1 / 3;
+  -ms-grid-row: 5;
+  -ms-grid-row-span: 4;
+  grid-row: 5 / 9;
+}
+
+main #content .C .kbImage {
+  height: 100%;
+  width: 100%;
+  -o-object-fit: cover;
+     object-fit: cover;
+}
+
+main #content .D {
+  -ms-grid-column: 3;
+  -ms-grid-column-span: 6;
+  grid-column: 3 / 9;
+  -ms-grid-row: 5;
+  -ms-grid-row-span: 4;
+  grid-row: 5 / 9;
+}
+
+main #content .D .kbClip {
+  height: 100%;
+  width: 100%;
+  -o-object-fit: cover;
+     object-fit: cover;
+}
+
+main #footer {
+  bottom: 0;
+  height: 20vh;
+  max-width: 100%;
+  margin-left: 9.7vw;
+  background: black;
+  margin-top: 0.6vh;
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-rows: (1fr)[3];
+  -ms-grid-columns: (1fr)[3];
+      grid-template: repeat(3, 1fr)/repeat(3, 1fr);
+}
+
+main #footer .Uno {
+  -ms-grid-column: 1;
+  -ms-grid-column-span: 1;
+  grid-column: 1 / 2;
+  -ms-grid-row: 1;
+  -ms-grid-row-span: 3;
+  grid-row: 1 / 4;
+  height: 100%;
+  max-width: 100%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  color: white;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+main #footer .Dos {
+  -ms-grid-column: 2;
+  -ms-grid-column-span: 1;
+  grid-column: 2 / 3;
+  -ms-grid-row: 1;
+  -ms-grid-row-span: 3;
+  grid-row: 1 / 4;
+  height: 100%;
+  max-width: 100%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  color: white;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+main #footer .Tres {
+  -ms-grid-column: 3;
+  -ms-grid-column-span: 1;
+  grid-column: 3 / 4;
+  -ms-grid-row: 1;
+  -ms-grid-row-span: 3;
+  grid-row: 1 / 4;
+  height: 100%;
+  max-width: 100%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  color: white;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+/*# sourceMappingURL=style.css.map */
