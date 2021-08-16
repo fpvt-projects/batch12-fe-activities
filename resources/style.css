@@ -1,5 +1,37 @@
 * {
-    padding: 0;
-    margin: 0;
-    box-sizing: border-box;
+  padding: 0;
+  margin: 0;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
 }
+
+header {
+  height: 100vh;
+  max-width: 100vw;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  padding: 0.7vw;
+}
+
+header h1 {
+  position: absolute;
+  top: 45%;
+  left: 45%;
+  text-transform: uppercase;
+  mix-blend-mode: overlay;
+  text-shadow: 0 5px 10px black;
+}
+
+header #bgColor01 {
+  height: 100%;
+  width: 50%;
+  background: #ff6b6b;
+}
+
+header #bgColor02 {
+  background: #ffd371;
+  height: 100%;
+  width: 50%;
+}
+/*# sourceMappingURL=style.css.map */

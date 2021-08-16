@@ -9,90 +9,246 @@
     <link rel="stylesheet" href="./resources/style.css">
 </head>
     <body>
+        <!-- Main-Container -->
         <div id="mainContainer">
-            <!-- Sticky-Header-with-Navigation -->
+            <!-- Header -->
             <header>
-                <!-- Header-with-Logo -->
+                <div id="headerIMG">
+                    <i class="fas fa-feather-alt"></i>
+                </div>
                 <div id="header">
-                    <div id="brand">
-                        <h1 class="logo">The-KB</h1>
-                        <h1 class="logo">Project</h1>
-                    </div>
+                    <h1 class="brandLogo">The-KB</h1>
+                    <h1 class="brandLogo">Project</h1>
                 </div>
-
-                <!-- Navigation-Bar -->
-                <nav id='nav-bar'>
-                    <ul id="nav-links">
-                        <li id="nav-link"><a href="#">Home</a></li>
-                        <li id="nav-link"><a href="#theWall">About Us</a></li>
-                        <li id="nav-link"><a href="#">Founders</a></li>
-                        <li id="nav-link"><a href="#">Placement</a></li>
-                        <li id="nav-link"><a href="#">Inquaries</a></li>
-                        <li id="nav-link"><a href="#">Support</a></li>
-                    </ul>
-                </nav>
-
+                <div id="menuBtn">
+                    <i class="fas fa-bars" onclick='show()'></i>
+                </div>
             </header>
-            
-            <!-- Content -->
+            <!-- Navigation-Bar -->
+            <nav id="nav-bar">
+                <ul id="nav-links">
+                    <li id="nav-link"><a href="#">Home</a></li>
+                    <li id="nav-link"><a href="#extraBG">About</a></li>
+                    <li id="nav-link"><a href="#categoryContainer">Categories</a></li>
+                    <li id="nav-link"><a href="#actionContainer">Projects</a></li>
+                    <li id="nav-link"><a href="#">Book Now!</a></li>
+                </ul>
+            </nav>
+            <!-- Main-Content -->
             <main>
-                <!-- First-Phase-Content -->
-                <div id="headerContent">
-                    <div class="mainContent A">
-                        <video src="./resources/assets/clips/clip-kb-project-00.mp4" class="kbClip" loop autoplay muted ></video>
+                <div id="phaseOneContent">
+                    <div class="phaseOneBox A">
+                        <img src="./resources/img/main-bg.png" alt="">
                     </div>
-                    <div class="mainContent B">
-                        <img src="./resources/assets/images/kb-projects (1).jpeg" alt="" class="kbImage">
+                    <div class="phaseOneBox facebook">
+                        <i class="fab fa-facebook-f"></i>
                     </div>
-                    <div class="mainContent C">
-                        <img src="./resources/assets/images/kb-projects (1).jpg" alt="" class="kbImage">
+                    <div class="phaseOneBox twitter">
+                        <i class="fab fa-twitter"></i>
                     </div>
-                    <div class="mainContent D">
-                        <video src="./resources/assets/clips/clip-kb-project.mp4" class="kbClip" loop autoplay muted ></video>
+                    <div class="phaseOneBox reddit">
+                        <i class="fab fa-reddit-alien"></i>
+                    </div>
+                    <div class="phaseOneBox instagram">
+                        <i class="fab fa-instagram"></i>
+                    </div>
+                    <div class="phaseOneBox tiktok">
+                        <i class="fab fa-tiktok"></i>
+                    </div>
+                    <div class="phaseOneBox pinterest">
+                        <i class="fab fa-pinterest"></i>
+                    </div>
+                    <div class="phaseOneBox social">
+                        <p id="socialContent">Follow us! to know our latest news and produccts.
+                        </p>
+                    </div>
+                    <div class="phaseOneBox B">
+                        <img src="./resources/img/bg-header00.jpg" alt="">
+                    </div>
+                    <div class="phaseOneBox C"></div>
+                    <div class="phaseOneBox D">
+                        <div class="switches">
+                            <img src="./resources/img/logo-logitech.png" alt="" class="brandSwitches">
+                        </div>
+                        <div class="switches">
+                            <img src="./resources/img/logo-razer.png" alt="" class="brandSwitches">
+                        </div>
+                        <div class="switches">
+                            <img src="./resources/img/logo-cherry-mx.png" alt="" class="brandSwitches">
+                        </div>
+                        <div class="switches">
+                            <img src="./resources/img/logo-gateron.png" alt="" class="brandSwitches">
+                        </div>
+                        <div class="switches">
+                            <img src="./resources/img/logo-glorious.png" alt="" class="brandSwitches">
+                        </div>
+                        <div class="switches">
+                            <img src="./resources/img/logo-kaih.png" alt="" class="brandSwitches">
+                        </div>
+                    </div>
+                    <div class="phaseOneBox E">
+                        <h1>키보드 프로젝트</h1>
+                    </div>
+                    <div class="phaseOneBox linkedin">
+                        <i class="fab fa-linkedin-in"></i>
+                    </div>
+                    <div class="phaseOneBox github">
+                        <i class="fab fa-github"></i>
+                    </div>
+                    <div class="phaseOneBox H">
+                        <i class="fas fa-angle-double-right"></i>
+                    </div>
+                    <div class="phaseOneBox I">
+                        <i class="fas fa-angle-double-left"></i>
+                    </div>
+                    <div class="phaseOneBox kbModel">
+                        <img src="./resources/img/kb- model.jpg" alt="">
+                    </div>
+                    <div class="phaseOneBox K">
+                        <h1>キーボードプロジェクト</h1>
+                    </div>
+                    <div class="phaseOneBox L">
+                        <h1>get yours now!</h1>
+                    </div>
+                    <div class="phaseOneBox M">
+                        <img src="./resources/img/kb-projects (1).jpg" alt="">
                     </div>
                 </div>
 
-                <!-- Second-Phase-Content -->
-                <div id="exploreContainer">
-                    <div id="exploreContent">
-                        <h1>Explore Products</h1>
-                        <div id="kbContent">
-                            <div id="kbGaming">
-                                <div class="imgContainer Gaming">
-                                    <img src="./resources/assets/images/kb-gaming.png" alt="">
-                                </div>
-                                <div class="kbInfo"></div>
+                <div id="extraBG">
+                    <img src="./resources/img/bg-header.jpg" alt="">
+                    <div id='phaseTwoContent'>
+                        <h4>Featured In:</h4>
+                        <div id="featureContainer">
+                            <div class='feature inq'>
+                                <img src="./resources/img/feature-inq.png" alt="">
                             </div>
-                            <div id="kbEnthusiast">
-                                <div class="imgContainer Enthusiast">
-                                    <img src="./resources/assets/images/kb-enthusiast.png" alt="">
-                                </div>
-                                <div class="kbInfo"></div>
+                            <div class='feature rappler'>
+                                <img src="./resources/img/feature-rappler.png" alt="">
                             </div>
-                            <div id="kbLuxury">
-                                <div class="imgContainer Luxury">
-                                    <img src="./resources/assets/images/kb-luxury.jpg" alt="">
-                                </div>
-                                <div class="kbInfo"></div>
+                            <div class="feature mnlBulletin">
+                                <img src="./resources/img/feature-mb.png" alt="">
+                            </div>
+                            <div class="feature bizzNews">
+                                <img src="./resources/img/feature-biznews.png" alt="">
+                            </div>
+                            <div class="feature businessworld">
+                                <img src="./resources/img/feature-businessworld.png" alt="">
+                            </div>
+                            <div class="feature dealstreetasia">
+                                <img src="./resources/img/feature-dealstreetasia.png" alt="">
+                            </div>
+                            <div class="feature gma">
+                                <img src="./resources/img/feature-gma.png" alt="">
+                            </div>
+                            <div class="feature fintech">
+                                <img src="./resources/img/feature-fintechalliance.png" alt="">
                             </div>
                         </div>
                     </div>
                 </div>
 
-
-
-
-                <!-- Footer -->
-                <footer>
-                    <div id="footer">
-                        <div class="footerContent Uno">Footer Content</div>
-                        <div class="footerContent Dos">Footer Content</div>
-                        <div class="footerContent Tres">Footer Content</div>
+                <!-- backing -->
+                <h2 id='testHeader'>Testimonials:</h2>
+                <div id="sitebackers">
+                    <div class="testimonial shroud">
+                        <div class="testIMGContainers">
+                            <img src="./resources/img/test-shroud.png" alt="">
+                        </div>
+                        <h5>Michael Grzesiek (Shroud)</h5>
+                        <h6>E-Sport Pro Player</h6>
+                        <p></p>
                     </div>
-                </footer>
+                    <div class="testimonial bjergsen">
+                        <div class="testIMGContainers">
+                            <img src="./resources/img/test-bjergsen.png" alt="">
+                        </div>
+                        <h5>Søren Bjerg (Bjergsen)</h5>
+                        <h6>ESL Pro League Player</h6>
+                        <p></p>
+                    </div>
+                    <div class="testimonial faker">
+                        <div class="testIMGContainers">
+                            <img src="./resources/img/test-faker.png" alt="">
+                        </div>
+                        <h5>Lee Sang-hyeok (Faker)</h5>
+                        <h6>LCK Pro League Player</h6>
+                        <p></p>
+                    </div>
+                    <div class="testimonial zuckerberg">
+                        <div class="testIMGContainers">
+                            <img src="./resources/img/test-mark.png" alt="">
+                        </div>
+                        <h5>Mark Elliot Zuckerberg</h5>
+                        <h6>Founder of Facebook</h6>
+                        <p></p>
+                    </div>
+                    <div class="testimonial billGates">
+                        <div class="testIMGContainers">
+                            <img src="./resources/img/test-bill.png" alt="">
+                        </div>
+                        <h5>William Henry Gates III</h5>
+                        <h6>Founder of Microsoft Corporation</h6>
+                        <p></p>
+                    </div>
+                </div>
+                
 
-
+                <!-- Categories -->
+                <div id="categoryContainer">
+                    <h6>Category</h6>
+                    <div id="categories">
+                        <div class="catBox gaming">
+                            <div class="catBoxIMG">
+                                <img src="./resources/img/kb-gaming.jpg" alt="">
+                            </div>
+                            <div class="nameBox">
+                                <h1>For gamers by gamers</h1>
+                            </div>
+                        </div>
+                        <div class="catBox diy">
+                            <div class="catBoxIMG">
+                                <img src="./resources/img/kb-mec.jpg" alt="">
+                            </div>
+                            <div class="nameBox">
+                                <h1>DIY Mechanic</h1>
+                            </div>
+                        </div>
+                        <div class="catBox luxury">
+                            <div class="catBoxIMG">
+                                <img src="./resources/img/kb-lux.jpg" alt="">
+                            </div>
+                            <div class="nameBox">
+                                <h1>Rich Kid Problems</h1>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            
+                <div id="actionContainer">
+                    <h1>Project in Action</h1>
+                    <div id="actionGrid">
+                        <div class="project V1">
+                            <video src="./resources/clips/clip-kb-project-00.mp4" autoplay muted loop></video>
+                        </div>
+                        <div class="project V2">
+                            <video src="./resources/clips/clip-kb-project.mp4" autoplay loop muted></video>
+                        </div>
+                        <div class="project V3">
+                            <img src="./resources/img/kb-projects (1).jpeg" alt="">
+                        </div>
+                        <div class="project V4">
+                            <img src="./resources/img/kb-projects (3).jpg" alt="">
+                        </div>
+                        <div class="project V5"></div>
+                    </div>
+                </div>
             </main>
+
+            <!-- Footer -->
+            <footer></footer>
         </div>
+        <script src="https://kit.fontawesome.com/30c70394c0.js" crossorigin="anonymous"></script>
+        <script src="main.js"></script>  
     </body>
 </html>
