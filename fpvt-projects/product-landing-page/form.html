@@ -5,8 +5,58 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>KB-Booking</title>
+
+    <style>
+        * {
+            padding: 0;
+            margin: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            width: 100vw;
+        }
+
+        #formContainer {
+            height: 40vh;
+            width: 50vw;
+            background: yellow;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            flex-direction: column;
+            box-shadow: 1px 3px 4px black;
+        }
+
+        h1 {
+            text-transform: uppercase;
+        }
+    </style>
 </head>
 <body>
+
     
+    <div id="formContainer">
+        <h1>Thank you for choosing The-KB Project</h1>
+        <div id="validation-email">
+            <h6 id="email-placement"></h6>
+         </div>
+    </div>
+
+    
+    
+
+    <script type="text/javascript">
+        var url_string = window.location.href
+        var url = new URL(url_string);
+        var emailref = url.searchParams.get("email");
+    
+        document.getElementById("email-placement").textContent += emailref;
+
+    </script> 
 </body>
 </html>
