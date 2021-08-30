@@ -1,0 +1,447 @@
+@font-face {
+  font-family: handWritten;
+  src: url("./fonts/My_handwriting.ttf");
+}
+
+@font-face {
+  font-family: timeFont;
+  src: url("./fonts/Timeline.ttf");
+}
+
+* {
+  padding: 0;
+  margin: 0;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+}
+
+body {
+  overflow: hidden;
+}
+
+#main-wrapper {
+  height: 100vh;
+  width: 100vw;
+  background: url("./images/crampled.jpg");
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+  background-position: center;
+  overflow: hidden;
+}
+
+#main-wrapper #time-wrapper {
+  height: 20vh;
+  width: 80vw;
+  position: absolute;
+  top: 16%;
+  left: 11%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+#main-wrapper #time-wrapper #timeHeader {
+  font-size: 15vh;
+  font-family: timeFont;
+}
+
+#main-wrapper #name-wrapper {
+  height: 15vh;
+  width: 80vw;
+  position: absolute;
+  left: 11%;
+  top: 37%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+}
+
+#main-wrapper #name-wrapper #name-label {
+  text-transform: uppercase;
+  font-family: handWritten;
+  font-size: 8vh;
+}
+
+#main-wrapper #name-wrapper #name-input {
+  height: 5vh;
+  width: 15vw;
+  border: none;
+  border-bottom: 1px solid black;
+  background: none;
+  font-size: 2.5vw;
+}
+
+#main-wrapper #name-wrapper #name-display {
+  font-size: 9vh;
+  text-transform: uppercase;
+  font-family: handWritten;
+}
+
+#main-wrapper #focus-wrapper {
+  height: 15vh;
+  width: 80vw;
+  display: none;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  position: absolute;
+  left: 11%;
+  top: 53%;
+}
+
+#main-wrapper #focus-wrapper #focus-label {
+  text-transform: uppercase;
+  font-family: handWritten;
+  font-size: 5vh;
+}
+
+#main-wrapper #focus-wrapper #display-label {
+  text-transform: uppercase;
+  font-family: handWritten;
+  font-size: 5vh;
+  display: none;
+}
+
+#main-wrapper #focus-wrapper #focus-input {
+  height: 5vh;
+  width: 15vw;
+  border: none;
+  border-bottom: 1px solid black;
+  background: none;
+  font-size: 2.5vw;
+}
+
+#main-wrapper #focus-wrapper #focus-display {
+  text-decoration: underline;
+  text-transform: uppercase;
+  font-family: handWritten;
+  font-size: 5vh;
+}
+
+#main-wrapper #toDo-wrapper {
+  background: url("./images/yellow-crampled.jpg");
+  -webkit-clip-path: polygon(0 0, 100% 0, 100% 28%, 100% 70%, 100% 100%, 10% 100%, 10% 16%, 0 16%);
+          clip-path: polygon(0 0, 100% 0, 100% 28%, 100% 70%, 100% 100%, 10% 100%, 10% 16%, 0 16%);
+  height: 60vh;
+  width: 25vw;
+  position: fixed;
+  right: -22.5vw;
+  top: 5vh;
+  -webkit-transition: all 300ms ease-in-out;
+  transition: all 300ms ease-in-out;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+#main-wrapper #toDo-wrapper #toDo-button {
+  height: 8vh;
+  width: 2vw;
+  margin: 0.5vh;
+  cursor: pointer;
+  -webkit-writing-mode: vertical-lr;
+      -ms-writing-mode: tb-lr;
+          writing-mode: vertical-lr;
+  text-transform: uppercase;
+  font-family: handWritten;
+  font-size: 4vh;
+  line-height: 1vw;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+#main-wrapper #toDo-wrapper #actual-toDo-wrapper {
+  height: 100%;
+  width: 100%;
+  margin-left: 2vw;
+  margin-top: 1vw;
+  margin-right: 1vw;
+}
+
+#main-wrapper #toDo-wrapper #actual-toDo-wrapper #inputlist-wrapper {
+  height: 7%;
+  width: 100%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+
+#main-wrapper #toDo-wrapper #actual-toDo-wrapper #inputlist-wrapper #todo-add {
+  height: 100%;
+  width: 85%;
+  background: white;
+  border-right: none;
+  padding: 1vh;
+  text-transform: uppercase;
+}
+
+#main-wrapper #toDo-wrapper #actual-toDo-wrapper #inputlist-wrapper #todo-add-button {
+  height: 100%;
+  width: 10%;
+  background: white;
+  border-left: none;
+  cursor: pointer;
+}
+
+#main-wrapper #toDo-wrapper #actual-toDo-wrapper #list-wrapper {
+  margin-top: 1vw;
+  height: 80%;
+  width: 100%;
+  position: relative;
+}
+
+#main-wrapper #toDo-wrapper #actual-toDo-wrapper #list-wrapper #toDo-List {
+  list-style: none;
+  max-height: 43vh;
+  overflow-y: auto;
+}
+
+#main-wrapper #toDo-wrapper #actual-toDo-wrapper #list-wrapper #toDo-List #toDo-items {
+  margin: 0.5vw;
+  background: white;
+  height: 5vh;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  position: relative;
+  padding-left: 0.5vw;
+  border-radius: 0.5vw;
+  overflow: hidden;
+  text-transform: uppercase;
+}
+
+#main-wrapper #toDo-wrapper #actual-toDo-wrapper #list-wrapper #toDo-List #toDo-items i {
+  background: red;
+  position: absolute;
+  right: -3vw;
+  height: 100%;
+  width: 15%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  border-top-right-radius: 0.5vw;
+  border-bottom-right-radius: 0.5vw;
+  cursor: pointer;
+  -webkit-transition: all 200ms ease-in-out;
+  transition: all 200ms ease-in-out;
+  font-weight: bold;
+  color: white;
+}
+
+#main-wrapper #toDo-wrapper #actual-toDo-wrapper #list-wrapper #toDo-List #toDo-items i i {
+  color: white;
+  font-size: 1vw;
+}
+
+#main-wrapper #toDo-wrapper #actual-toDo-wrapper #list-wrapper #toDo-List #toDo-items:hover i {
+  right: 0;
+}
+
+#main-wrapper #toDo-wrapper.active {
+  right: 0;
+}
+
+#main-wrapper #qoute-wrapper {
+  position: absolute;
+  bottom: 8vw;
+  left: 11%;
+  height: 10vh;
+  width: 80vw;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  font-family: handWritten;
+  font-size: 5vh;
+}
+
+#main-wrapper #qoute-wrapper #qoute-display {
+  text-align: center;
+}
+
+#main-wrapper #qoute-wrapper #own-qoute {
+  display: none;
+  width: 60%;
+  height: 30%;
+  border: none;
+  background: none;
+  border-bottom: 1px solid black;
+}
+
+#main-wrapper #qoute-generator {
+  height: 10vh;
+  width: 80vw;
+  position: absolute;
+  bottom: 4vh;
+  left: 11%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: space-evenly;
+      -ms-flex-pack: space-evenly;
+          justify-content: space-evenly;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+#main-wrapper #qoute-generator button {
+  background: none;
+  border: none;
+  margin: 1vw;
+  cursor: pointer;
+}
+
+#main-wrapper #spotify-wrapper {
+  background: url("./images/green-crampled.jpg");
+  -webkit-clip-path: polygon(0 0, 100% 0, 100% 28%, 100% 70%, 100% 100%, 10% 100%, 10% 16%, 0 16%);
+          clip-path: polygon(0 0, 100% 0, 100% 28%, 100% 70%, 100% 100%, 10% 100%, 10% 16%, 0 16%);
+  height: 60vh;
+  width: 25vw;
+  position: fixed;
+  right: -22.5vw;
+  top: 15vh;
+  -webkit-transition: all 300ms ease-in-out;
+  transition: all 300ms ease-in-out;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+#main-wrapper #spotify-wrapper #spotify-button {
+  height: 8vh;
+  width: 2vw;
+  margin: 0.5vh;
+  cursor: pointer;
+  -webkit-writing-mode: vertical-lr;
+      -ms-writing-mode: tb-lr;
+          writing-mode: vertical-lr;
+  text-transform: uppercase;
+  font-family: handWritten;
+  font-size: 4vh;
+  line-height: 1vw;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+#main-wrapper #spotify-wrapper iframe {
+  height: 100%;
+  width: 100%;
+  margin-left: 0.2vw;
+  width: 100%;
+}
+
+#main-wrapper #spotify-wrapper.active {
+  right: 0;
+}
+
+#main-wrapper #notes-wrapper {
+  background: url("./images/blue-crampled.jpg");
+  -webkit-clip-path: polygon(0 0, 100% 0, 100% 28%, 100% 70%, 100% 100%, 10% 100%, 10% 16%, 0 16%);
+          clip-path: polygon(0 0, 100% 0, 100% 28%, 100% 70%, 100% 100%, 10% 100%, 10% 16%, 0 16%);
+  height: 60vh;
+  width: 25vw;
+  position: fixed;
+  right: -22.5vw;
+  top: 25vh;
+  -webkit-transition: all 300ms ease-in-out;
+  transition: all 300ms ease-in-out;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+#main-wrapper #notes-wrapper #notes-button {
+  height: 8vh;
+  width: 2vw;
+  margin: 0.5vh;
+  cursor: pointer;
+  -webkit-writing-mode: vertical-lr;
+      -ms-writing-mode: tb-lr;
+          writing-mode: vertical-lr;
+  text-transform: uppercase;
+  font-family: handWritten;
+  font-size: 4vh;
+  line-height: 1vw;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+#main-wrapper #notes-wrapper #text-notes {
+  height: 100%;
+  width: 90%;
+  opacity: .8;
+  border: none;
+  font-size: 1vw;
+  padding: 0.5vw;
+}
+
+#main-wrapper #notes-wrapper.active {
+  right: 0;
+}
+/*# sourceMappingURL=style.css.map */
