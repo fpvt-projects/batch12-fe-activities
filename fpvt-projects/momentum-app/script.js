@@ -26,12 +26,20 @@ timeUpdate();
 //Display-Name
 nameInput.addEventListener('keypress', e=> {
     if(e.keyCode === 13) { 
+        if(nameDisplay.textContent != '') {
+            document.querySelector('#focus-wrapper').style.display = 'flex';
+        } else {
         // console.log(nameInput.value); //Check if Value is retrieved
         const nameValue = nameInput.value;
+        if (nameValue == '') {
+            alert('please enter your name');
+        } else {
         nameDisplay.innerHTML = `Bonjour <span contenteditable>${nameValue}</span>, Better rock your world!`;
         nameLabel.style.display = 'none';
         nameInput.style.display = 'none';
         document.querySelector('#focus-wrapper').style.display = 'flex';
+        }
+    }
     }
 })
 
@@ -57,14 +65,16 @@ let toDoArray = [];
 toDoAddValue.addEventListener('click', ()=> {
     const theList = document.querySelector('#toDo-List');
     const toDoInputValue = document.querySelector('#todo-add').value;
-    toDoArray.push(toDoInputValue);
-    const newToDo = document.createElement('li');
-    newToDo.setAttribute('id', 'toDo-items');
-    newToDo.innerHTML = toDoInputValue + '<i class="fas fa-trash"></i>';
-    theList.append(newToDo);
-    console.log(toDoArray);
-    
-    
+    if(toDoInputValue === ''){
+        alert('Please Enter Task')
+    } else {
+        toDoArray.push(toDoInputValue);
+        const newToDo = document.createElement('li');
+        newToDo.setAttribute('id', 'toDo-items');
+        newToDo.innerHTML = toDoInputValue + '<i class="fas fa-trash"></i>';
+        theList.append(newToDo);
+        console.log(toDoArray);
+    }
     
     // pendingTask.textContent = `You have ${toDoArray.length} pending task`;;
 })
@@ -135,13 +145,52 @@ newQouteWrapper.addEventListener('keypress', (e) => {
 //Focus Display
 const displayFocus = document.querySelector('#focus-display');
 const focusInput = document.querySelector('#focus-input');
+const currentValue = focusInput.value;
 
 focusInput.addEventListener('keypress', (e) => {
     if(e.keyCode === 13) {
         const focusValue = focusInput.value;
+        if (focusValue == ''){
+            alert('Please let us know you focus');
+        } else {
         document.querySelector('#focus-label').style.display = 'none';
         document.querySelector('#focus-input').style.display = 'none';
         document.querySelector('#display-label').style.display = 'block';
         displayFocus.innerHTML = focusValue;
     }
+    }
 })
+
+//testing with local storage
+const saveDisplayName = () => {
+    localStorage.setItem('EnteredName', nameDisplay.innerHTML);
+    console.log('Done');
+}
+
+const storedList = localStorage.getItem('EnteredName');
+
+if(storedList) {
+    nameDisplay.innerHTML = storedList;
+    nameLabel.style.display = 'none';
+    nameInput.style.display = 'none';
+    document.querySelector('#focus-wrapper').style.display = 'flex';
+}
+
+function saveFocus() {
+    localStorage.setItem('EnteredFocus', document.querySelector('#focus-display').innerHTML);
+    console.log('Focus Done')   
+}
+
+const storedFocus = localStorage.getItem('EnteredFocus');
+
+if(storedFocus != null) {
+    document.querySelector('#focus-display').innerHTML = storedFocus;
+    document.querySelector('#focus-label').style.display = 'none';
+    document.querySelector('#focus-input').style.display = 'none';
+    document.querySelector('#display-label').style.display = 'flex';
+}
+
+function resetPage() {
+    localStorage.clear();
+    location.reload();
+}
