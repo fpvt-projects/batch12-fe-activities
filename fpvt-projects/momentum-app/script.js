@@ -71,7 +71,7 @@ toDoAddValue.addEventListener('click', ()=> {
         toDoArray.push(toDoInputValue);
         const newToDo = document.createElement('li');
         newToDo.setAttribute('id', 'toDo-items');
-        newToDo.innerHTML = toDoInputValue + '<i class="fas fa-trash"></i>';
+        newToDo.innerHTML = toDoInputValue + '<i class="fas fa-star"></i>' + '<i class="fas fa-trash"></i>';
         theList.append(newToDo);
         console.log(toDoArray);
     }
@@ -91,7 +91,18 @@ function deleteTask(e) {
    if (item.classList.contains('fa-trash')) {
         const toDelete = item.parentElement;
         toDelete.remove();
-   }
+      } else if (item.classList.contains('fa-star')) {
+          console.log(item.parentElement.textContent); //checking if code works
+          document.querySelector('#focus-display').textContent = item.parentElement.textContent;
+      }
+//      else if (item.classList.contains('fa-star')) {
+//        const addToFocus = item.parentElement.textContent;
+//        const changeValue = document.querySelector('#toDo-items').value;
+//        if (changeValue.value == '') {
+//         changeValue.value = addToFocus;
+//        console.log(addToFocus);
+//        }
+//    }
 }
 
 //RANDOM-QOUTE-GENERATOR

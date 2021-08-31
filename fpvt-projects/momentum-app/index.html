@@ -39,7 +39,7 @@
                     </div>
                     <div id="list-wrapper">
                         <ul id="toDo-List">
-                            <li id='toDo-items'>Francis <i class="fas fa-trash"></i></li>
+                            <li id='toDo-items'>Francis <i class="fas fa-star"></i><i class="fas fa-trash"></i></li>
                         </ul>
                         <div id="footer">
                             <!-- <span id="pending-bar">You have 4 pending tasks</span> -->
@@ -74,8 +74,10 @@
             </div>
 
             <!-- Save-Button and delete -->
-            <button id="save-button" onclick='saveDisplayName(); saveFocus();'>Save</button>
-            <button id="reset-button" onclick='resetPage()'>Reset</button>
+            <div id="button-wrapper">
+                <button id="save-button" onclick='saveDisplayName(); saveFocus();'>Save</button>
+                <button id="reset-button" onclick='resetPage()'>Reset</button>
+            </div>
         </div>
         <script src="https://kit.fontawesome.com/30c70394c0.js" crossorigin="anonymous"></script>
         <script src="./script.js"></script>

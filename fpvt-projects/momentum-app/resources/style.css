@@ -50,6 +50,8 @@ body {
 #main-wrapper #time-wrapper #timeHeader {
   font-size: 15vh;
   font-family: timeFont;
+  -webkit-animation: fadein 2s;
+          animation: fadein 2s;
 }
 
 #main-wrapper #name-wrapper {
@@ -77,6 +79,8 @@ body {
   text-transform: uppercase;
   font-family: handWritten;
   font-size: 8vh;
+  -webkit-animation: fadein 2s;
+          animation: fadein 2s;
 }
 
 #main-wrapper #name-wrapper #name-input {
@@ -86,12 +90,34 @@ body {
   border-bottom: 1px solid black;
   background: none;
   font-size: 2.5vw;
+  -webkit-animation: fadein 2s;
+          animation: fadein 2s;
 }
 
 #main-wrapper #name-wrapper #name-display {
   font-size: 9vh;
   text-transform: uppercase;
   font-family: handWritten;
+  -webkit-animation: fadein 2s;
+          animation: fadein 2s;
+}
+
+@-webkit-keyframes fadein {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+@keyframes fadein {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
 }
 
 #main-wrapper #focus-wrapper {
@@ -117,6 +143,8 @@ body {
   text-transform: uppercase;
   font-family: handWritten;
   font-size: 5vh;
+  -webkit-animation: fadein 2s;
+          animation: fadein 2s;
 }
 
 #main-wrapper #focus-wrapper #display-label {
@@ -124,6 +152,8 @@ body {
   font-family: handWritten;
   font-size: 5vh;
   display: none;
+  -webkit-animation: fadein 2s;
+          animation: fadein 2s;
 }
 
 #main-wrapper #focus-wrapper #focus-input {
@@ -140,6 +170,8 @@ body {
   text-transform: uppercase;
   font-family: handWritten;
   font-size: 5vh;
+  -webkit-animation: fadein 2s;
+          animation: fadein 2s;
 }
 
 #main-wrapper #toDo-wrapper {
@@ -206,18 +238,22 @@ body {
 #main-wrapper #toDo-wrapper #actual-toDo-wrapper #inputlist-wrapper #todo-add {
   height: 100%;
   width: 85%;
-  background: white;
+  background: none;
   border-right: none;
   padding: 1vh;
   text-transform: uppercase;
+  border: none;
+  border-bottom: 1px red solid;
 }
 
 #main-wrapper #toDo-wrapper #actual-toDo-wrapper #inputlist-wrapper #todo-add-button {
   height: 100%;
   width: 10%;
-  background: white;
+  background: none;
   border-left: none;
   cursor: pointer;
+  border: none;
+  border-bottom: 1px red solid;
 }
 
 #main-wrapper #toDo-wrapper #actual-toDo-wrapper #list-wrapper {
@@ -229,13 +265,13 @@ body {
 
 #main-wrapper #toDo-wrapper #actual-toDo-wrapper #list-wrapper #toDo-List {
   list-style: none;
-  max-height: 43vh;
+  max-height: 50vh;
   overflow-y: auto;
 }
 
 #main-wrapper #toDo-wrapper #actual-toDo-wrapper #list-wrapper #toDo-List #toDo-items {
   margin: 0.5vw;
-  background: white;
+  background: none;
   height: 5vh;
   display: -webkit-box;
   display: -ms-flexbox;
@@ -245,12 +281,12 @@ body {
           align-items: center;
   position: relative;
   padding-left: 0.5vw;
-  border-radius: 0.5vw;
   overflow: hidden;
   text-transform: uppercase;
+  border: 1px red solid;
 }
 
-#main-wrapper #toDo-wrapper #actual-toDo-wrapper #list-wrapper #toDo-List #toDo-items i {
+#main-wrapper #toDo-wrapper #actual-toDo-wrapper #list-wrapper #toDo-List #toDo-items .fa-trash {
   background: red;
   position: absolute;
   right: -3vw;
@@ -265,8 +301,6 @@ body {
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
-  border-top-right-radius: 0.5vw;
-  border-bottom-right-radius: 0.5vw;
   cursor: pointer;
   -webkit-transition: all 200ms ease-in-out;
   transition: all 200ms ease-in-out;
@@ -274,13 +308,39 @@ body {
   color: white;
 }
 
-#main-wrapper #toDo-wrapper #actual-toDo-wrapper #list-wrapper #toDo-List #toDo-items i i {
+#main-wrapper #toDo-wrapper #actual-toDo-wrapper #list-wrapper #toDo-List #toDo-items .fa-trash i {
   color: white;
   font-size: 1vw;
 }
 
-#main-wrapper #toDo-wrapper #actual-toDo-wrapper #list-wrapper #toDo-List #toDo-items:hover i {
+#main-wrapper #toDo-wrapper #actual-toDo-wrapper #list-wrapper #toDo-List #toDo-items .fa-star {
+  background: green;
+  position: absolute;
+  top: -5vw;
+  right: 2.5vw;
+  height: 100%;
+  width: 15%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  color: white;
+  -webkit-transition: all 200ms ease-in-out;
+  transition: all 200ms ease-in-out;
+  cursor: pointer;
+}
+
+#main-wrapper #toDo-wrapper #actual-toDo-wrapper #list-wrapper #toDo-List #toDo-items:hover .fa-trash {
   right: 0;
+}
+
+#main-wrapper #toDo-wrapper #actual-toDo-wrapper #list-wrapper #toDo-List #toDo-items:hover .fa-star {
+  top: 0;
 }
 
 #main-wrapper #toDo-wrapper.active {
@@ -308,6 +368,8 @@ body {
 
 #main-wrapper #qoute-wrapper #qoute-display {
   text-align: center;
+  -webkit-animation: fadein 2s;
+          animation: fadein 2s;
 }
 
 #main-wrapper #qoute-wrapper #own-qoute {
@@ -317,6 +379,8 @@ body {
   border: none;
   background: none;
   border-bottom: 1px solid black;
+  -webkit-animation: fadein 2s;
+          animation: fadein 2s;
 }
 
 #main-wrapper #qoute-generator {
@@ -435,7 +499,7 @@ body {
 #main-wrapper #notes-wrapper #text-notes {
   height: 100%;
   width: 90%;
-  opacity: .8;
+  opacity: 0.8;
   border: none;
   font-size: 1vw;
   padding: 0.5vw;
@@ -443,5 +507,22 @@ body {
 
 #main-wrapper #notes-wrapper.active {
   right: 0;
+}
+
+#main-wrapper #button-wrapper {
+  height: 5vh;
+  width: 10vw;
+  padding: 1vw;
+}
+
+#main-wrapper #button-wrapper button {
+  border-radius: 0.3vw;
+  border: none;
+  height: 1vw;
+  width: 2vw;
+  font-size: 0.4vw;
+  text-transform: uppercase;
+  font-weight: bold;
+  cursor: pointer;
 }
 /*# sourceMappingURL=style.css.map */
