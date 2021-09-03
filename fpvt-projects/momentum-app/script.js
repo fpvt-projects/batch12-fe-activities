@@ -3,7 +3,6 @@
 console.log('Execute-Program'); //Shows that the HTML can read JS Script
 
 //Query-Selectors
-
 const toDoAddValue = document.querySelector('#todo-add-button');
 const timePlaceholder = document.querySelector('#timeHeader');
 const nameLabel = document.querySelector('#name-label');
@@ -38,8 +37,8 @@ nameInput.addEventListener('keypress', e=> {
         nameLabel.style.display = 'none';
         nameInput.style.display = 'none';
         document.querySelector('#focus-wrapper').style.display = 'flex';
-        }
-    }
+         }
+     }
     }
 })
 
