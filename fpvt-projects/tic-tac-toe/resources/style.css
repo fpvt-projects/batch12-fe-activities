@@ -57,4 +57,21 @@
 #board-wrapper #button-wrapper {
   margin-top: 5vh;
 }
+
+#board-wrapper #modal-bg {
+  position: fixed;
+  background: black;
+  z-index: 9;
+  height: 100vh;
+  width: 100vw;
+}
+
+#board-wrapper #modal-bg h1 {
+  color: white;
+}
+
+#board-wrapper #modal-bg button {
+  height: 5vh;
+  width: 5vw;
+}
 /*# sourceMappingURL=style.css.map */

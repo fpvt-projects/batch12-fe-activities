@@ -2,6 +2,8 @@
 console.log('Execute Program'); //Check if Script is working
 
 //VARIABLES
+const modalDiv = document.querySelector('#modal-bg');
+const modalExit = document.querySelector('#modal-exit-button');
 const boardCells = document.querySelectorAll('.cell');
 let player = true;
 
@@ -26,17 +28,84 @@ let gameState = [
 
 
 //FUNCTIONS
-const selectCell = (e) => {
+const selectCell = (e) => { 
     // console.log(e.target) //Check event target data
     const cellData = e.target;
     const cellIndex = parseInt(cellData.getAttribute('data-section-index'));
-    console.log(cellIndex); //Check index or selected or clicked target
+    console.log(cellIndex); //Check index of selected or clicked target
+    player = !player;
+    if(player === true) {
+        cellData.innerHTML = 'O';
+    } else {
+        cellData.innerHTML = 'X';
+    }
+    StoreMove(cellData);
+}
 
-    cellData.innerHTML = 'O';
+const StoreMove = (cellInfo) => {
+    let row1 = []
+    let row2 = []
+    let row3 = []
+    const cellIndex = parseInt(cellInfo.getAttribute('data-section-index'));
+    console.log(cellIndex) //check in index is still passed
+
+    if(cellIndex < 3) {
+        row1.push()
+    }
+    
 }
 
 //CLICK EVENTS
 boardCells.forEach(boardCell => boardCell.addEventListener('click', selectCell));
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 // //VARIABLES
 // const boardCells = document.querySelectorAll('.cell');
