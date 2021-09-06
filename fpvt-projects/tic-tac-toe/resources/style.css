@@ -1,0 +1,60 @@
+* {
+  padding: 0;
+  margin: 0;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+}
+
+#board-wrapper {
+  height: 100vh;
+  width: 100vw;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  background: green;
+}
+
+#board-wrapper #actual-board {
+  height: auto;
+  width: auto;
+  display: -ms-grid;
+  display: grid;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -ms-grid-rows: (5vw)[3];
+  -ms-grid-columns: (5vw)[3];
+      grid-template: repeat(3, 5vw)/repeat(3, 5vw);
+  gap: 0.2vw;
+}
+
+#board-wrapper #actual-board .cell {
+  cursor: pointer;
+  background: white;
+  border-radius: 0.4vw;
+  font-size: 5vh;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+#board-wrapper #button-wrapper {
+  margin-top: 5vh;
+}
+/*# sourceMappingURL=style.css.map */
