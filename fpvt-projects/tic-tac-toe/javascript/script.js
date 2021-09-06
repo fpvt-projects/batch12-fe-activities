@@ -31,8 +31,7 @@ let gameState = [
 const selectCell = (e) => { 
     // console.log(e.target) //Check event target data
     const cellData = e.target;
-    const cellIndex = parseInt(cellData.getAttribute('data-section-index'));
-    console.log(cellIndex); //Check index of selected or clicked target
+    // console.log(cellIndex); //Check index of selected or clicked target
     player = !player;
     if(player === true) {
         cellData.innerHTML = 'O';
@@ -42,17 +41,27 @@ const selectCell = (e) => {
     StoreMove(cellData);
 }
 
-const StoreMove = (cellInfo) => {
+const StoreMove = () => {
     let row1 = []
     let row2 = []
     let row3 = []
-    const cellIndex = parseInt(cellInfo.getAttribute('data-section-index'));
-    console.log(cellIndex) //check in index is still passed
+    // console.log(cellIndex) //check in index is still passed
 
-    if(cellIndex < 3) {
-        row1.push()
-    }
-    
+    boardCells.forEach((cell, cellIndex) => {
+        // console.log(cell, cellIndex);
+
+        if(cellIndex < 3){
+            row1.push(cell.innerText);
+        } else if (cellIndex >= 3 && cellIndex <=5) {
+            row2.push(cell.innerHTML);
+        } else if (cellIndex >= 6 && cellIndex <= 8) {
+            row3.push(cell.innerText);
+        }
+    })
+
+    console.log(row1);
+    console.log(row2);
+    console.log(row3);
 }
 
 //CLICK EVENTS
