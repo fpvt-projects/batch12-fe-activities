@@ -2,6 +2,7 @@
 console.log('Execute Program'); //Check if Script is working
 
 //VARIABLES    
+const backgroundM = document.querySelector('#bgtune')
 const buttonSet = document.querySelector('#button-wrapper')
 const reviewBtn = document.querySelector('#review-button');
 const winnerHeader = document.querySelector('.winner-header');
@@ -20,6 +21,8 @@ let gameHistory = 0;
 let drawCounter = 0;
 
 //TEST-AREA-FOR-VARIABLES-AND-FUNCTIONS
+backgroundM.style.display = 'none';
+
 
 //PLAYER SELECTION
 function playerSelection (mark)  {
@@ -39,6 +42,8 @@ function playerSelection (mark)  {
         document.querySelector('.X').style.background = 'none';
         document.querySelector('.O').style.background = 'linear-gradient(135deg, #71b7e6, #9b59b6)';
     }
+ 
+    // backgroundM.play();
 }
 
 //WINNING CONDITIONS AND COMBINATIONS
@@ -121,6 +126,8 @@ const classifyWinnner = (playerMark) => {
                     reviewHistory.classList.remove('hide');
                     reviewHistory.classList.add('show');
                     winnerHeader.innerHTML = `Player ${playerMark} Wins!`;
+                    console.log('Code reached here')
+                    boardCells.forEach(boardCell => boardCell.removeEventListener('click', selectCell));
                     return;
                 } 
             }
