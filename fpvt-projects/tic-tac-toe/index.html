@@ -5,7 +5,7 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
-    <link rel="stylesheet" href="./_resources/style.css">
+    <link rel="stylesheet" href="./resources/style.css">
 </head>
     <body>
         <!-- PLAYER-SELECTION -->
@@ -29,13 +29,6 @@
         <!-- BOARD-PROPER -->
         <div id="board-wrapper">
 
-            <div id="button-wrapper">
-                <button class="button previous"><i class="fas fa-backward"></i></button>
-                <button class="button reset"><i class="fas fa-power-off"></i></button>
-                <button class="button next"><i class="fas fa-forward"></i></button>
-
-            </div>
-
             <div class="details">
                 <div id="player-turn-display">
                     <span class="turn X">Player X</span>
@@ -55,9 +48,15 @@
                 <div class="cell"></div>
                 <div class="cell"></div>
             </div> 
+
+            <div id="button-wrapper">
+                <button class="button previous"><i class="fas fa-backward"></i></button>
+                <button class="button reset"><i class="fas fa-power-off"></i></button>
+                <button class="button next"><i class="fas fa-forward"></i></button
+            </div>
         </div>
 
         <script src="https://kit.fontawesome.com/30c70394c0.js" crossorigin="anonymous"></script>
-        <script src="./_javascript/script.js"></script>
+        <script src="./javascript/script.js"></script>
     </body>
 </html>

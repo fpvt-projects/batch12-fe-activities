@@ -57,10 +57,12 @@ const selectCell = (e) => {
     player = !player;
     if(player === true) {
         cellData.innerHTML = 'O';
+        cellData.style.color = 'green';
         playerMark = 'O';
     } else {
         cellData.innerHTML = 'X';
         playerMark = 'X';
+        cellData.style.color = 'red';
     }
     classifyWinnner(playerMark);
     StoreMove(cellData);
