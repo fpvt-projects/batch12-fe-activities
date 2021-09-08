@@ -6,12 +6,16 @@
 }
 
 body {
-  background: #FAFF00;
+  background: url("./img/bg-another.png");
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+  background-position: center;
+  background-size: cover;
   position: relative;
 }
 
 #player-selection-wrapper {
-  background: #EEEEEE;
+  background: #FCF0C8;
   position: absolute;
   left: 50%;
   top: 50%;
@@ -107,8 +111,10 @@ body {
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
-  -webkit-transition: all 0.5s ease;
-  transition: all 0.5s ease;
+  -webkit-transition: all 0.3s ease;
+  transition: all 0.3s ease;
+  -webkit-transform: scale(0.7);
+          transform: scale(0.7);
 }
 
 #board-wrapper .details {
@@ -178,9 +184,43 @@ body {
 }
 
 #board-wrapper #actual-board .cell {
-  background: white;
+  background: #FACE7F;
   border-radius: 0.3vw;
   border: 1px solid black;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  font-size: 5vw;
+  font-weight: bolder;
+}
+
+#board-wrapper #button-wrapper {
+  display: none;
+  padding: 1vw;
+  -webkit-box-pack: space-evenly;
+      -ms-flex-pack: space-evenly;
+          justify-content: space-evenly;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  width: 25%;
+  height: 12%;
+}
+
+#board-wrapper #button-wrapper button {
+  height: 50%;
+  width: 15%;
+  background: black;
+}
+
+#board-wrapper #button-wrapper button i {
+  color: white;
 }
 
 #board-wrapper.show {
@@ -193,7 +233,7 @@ body {
 .winner-board-wrapper {
   height: 20vh;
   width: 30vw;
-  background: black;
+  background: yellow;
   position: absolute;
   left: 50%;
   top: 50%;
@@ -201,5 +241,16 @@ body {
           transform: translate(-50%, -50%);
   display: none;
   z-index: 10;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  border: 1px solid grey;
 }
 /*# sourceMappingURL=style.css.map */

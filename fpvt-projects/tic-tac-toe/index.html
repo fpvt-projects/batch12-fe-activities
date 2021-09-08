@@ -4,50 +4,60 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Tic Tac Toe</title>
-    <link rel="stylesheet" href="./resources/style.css">
+    <title>Document</title>
+    <link rel="stylesheet" href="./_resources/style.css">
 </head>
     <body>
-        <!-- Board -->
+        <!-- PLAYER-SELECTION -->
         <div id="player-selection-wrapper">
             <header>Tic Tac Toe Project</header>
             <div class="content">
                 <div class="title">Select your player</div>
                 <div class="options">
-                    <button id="playerX">Player(X)</button>
-                    <button id="playerO">Player(O)</button>
+                    <button id="playerX">Player (X)</button>
+                    <button id="playerO">Player (O)</button>
                 </div>
             </div>
         </div>
 
-        <div id="board-wrapper">
-            <!-- <div id="modal-bg">
-                <h1 id="player-selection">
-                    Pick your Poison!
-                    <button id='modal-exit-button'>Exit</button>
-                    <button id="playerO">O</button>
-                    <button id="playerX">X</button>
-                </h1>
-            </div> -->
-            <div id="player-wrapper"></div>
-            <div id="actual-board">
-                <div class="cell" data-section-index='0'></div>
-                <div class="cell" data-section-index='1'></div>
-                <div class="cell" data-section-index='2'></div>
-                <div class="cell" data-section-index='3'></div>
-                <div class="cell" data-section-index='4'></div>
-                <div class="cell" data-section-index='5'></div>
-                <div class="cell" data-section-index='6'></div>
-                <div class="cell" data-section-index='7'></div>
-                <div class="cell" data-section-index='8'></div>
-            </div>
-            <div id="button-wrapper">
-                <button class="button Previous">Previous</button>
-                <button class="button Reset">Reset</button>
-                <button class="button Next">Next</button>
-            </div>
+        <!-- WINNER-BOARD -->
+        <div class="winner-board-wrapper">
+            <header class='winner-header'></header>
+            <button id='review-button'>Review History</button>
         </div>
 
-        <script type='module' src="./javascript/script.js"></script>
+        <!-- BOARD-PROPER -->
+        <div id="board-wrapper">
+
+            <div id="button-wrapper">
+                <button class="button previous"><i class="fas fa-backward"></i></button>
+                <button class="button reset"><i class="fas fa-power-off"></i></button>
+                <button class="button next"><i class="fas fa-forward"></i></button>
+
+            </div>
+
+            <div class="details">
+                <div id="player-turn-display">
+                    <span class="turn X">Player X</span>
+                    <span class="turn O">Player O</span>
+                    <div class="slider"></div>
+                </div>
+            </div>
+    
+            <div id="actual-board">
+                <div class="cell"></div>
+                <div class="cell"></div>
+                <div class="cell"></div>
+                <div class="cell"></div>
+                <div class="cell"></div>
+                <div class="cell"></div>
+                <div class="cell"></div>
+                <div class="cell"></div>
+                <div class="cell"></div>
+            </div> 
+        </div>
+
+        <script src="https://kit.fontawesome.com/30c70394c0.js" crossorigin="anonymous"></script>
+        <script src="./_javascript/script.js"></script>
     </body>
 </html>
