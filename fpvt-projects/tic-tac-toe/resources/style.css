@@ -11,7 +11,7 @@
 }
 
 body {
-  background: url("./img/bg-another.png");
+  background: linear-gradient(135deg, #71b7e6, #9b59b6);
   background-repeat: no-repeat;
   background-attachment: fixed;
   background-position: center;
@@ -21,7 +21,7 @@ body {
 }
 
 #player-selection-wrapper {
-  background: white;
+  background: #FFF;
   position: absolute;
   left: 50%;
   top: 50%;
@@ -96,11 +96,11 @@ body {
 }
 
 #player-selection-wrapper .content .options #playerX {
-  background: #79C002;
+  background: #D1171E;
 }
 
 #player-selection-wrapper .content .options #playerO {
-  background: #D1171E;
+  background: #79C002;
 }
 
 #player-selection-wrapper .content .options button:hover {
@@ -179,6 +179,7 @@ body {
   padding: 2vh;
   border-radius: 1vh;
   text-align: center;
+  color: #FFF;
   z-index: 2;
 }
 
@@ -186,7 +187,6 @@ body {
   position: absolute;
   top: 0;
   left: 0;
-  background: yellow;
   height: 100%;
   width: 50%;
   z-index: 1;
@@ -208,7 +208,7 @@ body {
 }
 
 #board-wrapper #actual-board .cell {
-  background: #FACE7F;
+  background: #FFF;
   border-radius: 0.3vw;
   border: 1px solid black;
   display: -webkit-box;
@@ -240,7 +240,7 @@ body {
 #board-wrapper #button-wrapper button {
   height: 50%;
   width: 15%;
-  background: black;
+  background: linear-gradient(135deg, #71b7e6, #9b59b6);
 }
 
 #board-wrapper #button-wrapper button i {
@@ -263,7 +263,9 @@ body {
   top: 50%;
   -webkit-transform: translate(-50%, -50%);
           transform: translate(-50%, -50%);
-  display: none;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
   z-index: 10;
   -webkit-box-orient: vertical;
   -webkit-box-direction: normal;
@@ -276,5 +278,23 @@ body {
       -ms-flex-align: center;
           align-items: center;
   border: 1px solid grey;
+  -webkit-transition: all 0.3s ease;
+  transition: all 0.3s ease;
+  opacity: 0;
+}
+
+.winner-board-wrapper.show {
+  opacity: 1;
+  -webkit-transform: translate(-50%, -50%), scale(1);
+          transform: translate(-50%, -50%), scale(1);
+}
+
+.winner-board-wrapper.hide {
+  opacity: 0;
+  pointer-events: none;
+  -webkit-transform: translate(-50%, -50%), scale(0.9);
+          transform: translate(-50%, -50%), scale(0.9);
+  -webkit-transition: all 0.3s ease;
+  transition: all 0.3s ease;
 }
 /*# sourceMappingURL=style.css.map */

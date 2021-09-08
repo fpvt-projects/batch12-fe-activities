@@ -10,7 +10,7 @@
 }
 
 body {
-    background: url('./img/bg-another.png');
+    background: linear-gradient(135deg, #71b7e6, #9b59b6);
     background-repeat: no-repeat;
     background-attachment: fixed;
     background-position: center; 
@@ -20,7 +20,7 @@ body {
 }
 
 #player-selection-wrapper {
-    background: white;
+    background: #FFF;
     position: absolute;
     left: 50%;
     top: 50%;
@@ -75,17 +75,18 @@ body {
                 }
 
                 #playerX {
-                    background: #79C002;
-                }
-
-                #playerO {
                     background: #D1171E;
                 }
 
+                #playerO {
+                    background: #79C002;
+              
+                 }
+            
                 button:hover {
-                    transform: scale(0.9);
-                }
+                transform: scale(0.9);
             }
+         }
     }
 }
 
@@ -136,6 +137,7 @@ body {
                 padding: 2vh;
                 border-radius: 1vh;
                 text-align: center;
+                color: #FFF;
                 z-index: 2;
             }
 
@@ -144,7 +146,6 @@ body {
                 position: absolute;
                 top: 0;
                 left: 0; 
-                background: yellow;
                 height: 100%;
                 width: 50%;
                 z-index: 1;
@@ -164,7 +165,7 @@ body {
         gap: 0.2vw;
 
         .cell {
-            background: #FACE7F;
+            background: #FFF;
             border-radius: 0.3vw;
             border: 1px solid black;
             display: flex;
@@ -187,7 +188,7 @@ body {
         button {
             height: 50%;
             width: 15%;
-            background: black;
+            background: linear-gradient(135deg, #71b7e6, #9b59b6);
 
             i {
                 color: white;
@@ -210,10 +211,24 @@ body {
     left: 50%;
     top: 50%;
     transform: translate(-50%, -50%);
-    display: none;
+    display: flex;
     z-index: 10;
     flex-direction: column;
     justify-content: center;
     align-items: center;
     border: 1px solid grey;
+    transition: all 0.3s ease;
+    opacity: 0;
+}
+
+.winner-board-wrapper.show {
+    opacity: 1;
+    transform: translate(-50%, -50%), scale(1);
+}
+
+.winner-board-wrapper.hide {
+    opacity: 0;
+    pointer-events: none;
+    transform: translate(-50%, -50%),scale(0.9);
+    transition: all 0.3s ease;
 }
