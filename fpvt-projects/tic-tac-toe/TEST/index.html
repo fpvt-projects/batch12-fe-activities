@@ -5,7 +5,7 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
-    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="./style.css">
 </head>
     <body>
 
@@ -21,14 +21,23 @@
             </div>
         </div>
 
+        <!-- WINNER-BOARD -->
+        <div class="winner-board-wrapper">
+            <header></header>
+            <button id='review-button'>Review History</button>
+        </div>
+
         <!-- BOARD-PROPER -->
         <div id="board-wrapper">
 
-            <div id="player-turn-display">
-                <span id="turnX">Player X</span>
-                <span id="turnO">Player O</span>
+            <div class="details">
+                <div id="player-turn-display">
+                    <span class="turn X">Player X</span>
+                    <span class="turn O">Player O</span>
+                    <div class="slider"></div>
+                </div>
             </div>
-
+                
             <div id="actual-board">
                 <div class="cell"></div>
                 <div class="cell"></div>
@@ -38,7 +47,20 @@
                 <div class="cell"></div>
                 <div class="cell"></div>
                 <div class="cell"></div>
+                <div class="cell"></div>
+            </div>
+
+            <div id="button-wrapper">
+                <button class="button previous">Previous</button>
+                <button class="button reset">Reset</button>
+                <button class="button next">Next</button>
             </div>
         </div>
+
+        
+
+
+        
+        <script src="./script.js"></script>
     </body>
 </html>
