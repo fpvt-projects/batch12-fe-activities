@@ -2,7 +2,7 @@
 console.log('Execute Program'); //Check if Script is working
 
 //VARIABLES    
-const backgroundM = document.querySelector('#bgtune')
+// const backgroundM = document.querySelector('#bgtune')
 const buttonSet = document.querySelector('#button-wrapper')
 const reviewBtn = document.querySelector('#review-button');
 const winnerHeader = document.querySelector('.winner-header');
@@ -42,7 +42,6 @@ function playerSelection (mark)  {
         document.querySelector('.X').style.background = 'none';
         document.querySelector('.O').style.background = 'linear-gradient(135deg, #71b7e6, #9b59b6)';
     }
- 
     // backgroundM.play();
 }
 
