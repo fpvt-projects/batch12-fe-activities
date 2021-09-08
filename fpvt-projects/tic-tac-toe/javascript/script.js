@@ -21,7 +21,7 @@ let gameHistory = 0;
 let drawCounter = 0;
 
 //TEST-AREA-FOR-VARIABLES-AND-FUNCTIONS
-backgroundM.style.display = 'none';
+// backgroundM.style.display = 'none';
 
 
 //PLAYER SELECTION
