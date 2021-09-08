@@ -119,6 +119,7 @@ body {
         display: flex;
         justify-content: center;
         align-items: center;
+        border-radius: 0.3vw;
     
         #player-turn-display {
             display: flex;
@@ -140,8 +141,7 @@ body {
                 color: #FFF;
                 z-index: 2;
             }
-
-
+            
             .slider {
                 position: absolute;
                 top: 0;
@@ -188,10 +188,10 @@ body {
         button {
             height: 50%;
             width: 15%;
-            background: linear-gradient(135deg, #71b7e6, #9b59b6);
+            background: #FFF;
 
             i {
-                color: white;
+                color: linear-gradient(135deg, #71b7e6, #9b59b6);
             }
         }
     }
@@ -204,9 +204,10 @@ body {
 }
 
 .winner-board-wrapper {
+    border-radius: 0.3vw;
     height: 20vh;
     width: 30vw;
-    background: yellow;
+    background: #FFF;
     position: absolute;
     left: 50%;
     top: 50%;
@@ -219,6 +220,17 @@ body {
     border: 1px solid grey;
     transition: all 0.3s ease;
     opacity: 0;
+
+    .winner-header {
+        text-transform: uppercase;
+        padding: 1vw;
+        font-size: 2vw;
+    }
+
+    #review-button {
+        height: 5vh;
+        width: 10vw;
+    }
 }
 
 .winner-board-wrapper.show {

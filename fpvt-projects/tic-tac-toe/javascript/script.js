@@ -21,8 +21,6 @@ let drawCounter = 0;
 
 //TEST-AREA-FOR-VARIABLES-AND-FUNCTIONS
 
-
-
 //PLAYER SELECTION
 function playerSelection (mark)  {
     if(mark === 'X') {
@@ -123,7 +121,6 @@ const classifyWinnner = (playerMark) => {
                     reviewHistory.classList.remove('hide');
                     reviewHistory.classList.add('show');
                     winnerHeader.innerHTML = `Player ${playerMark} Wins!`;
-                    reviewHistory.classList.add('show');
                     return;
                 } 
             }

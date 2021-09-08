@@ -154,6 +154,7 @@ body {
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
+  border-radius: 0.3vw;
 }
 
 #board-wrapper .details #player-turn-display {
@@ -240,11 +241,11 @@ body {
 #board-wrapper #button-wrapper button {
   height: 50%;
   width: 15%;
-  background: linear-gradient(135deg, #71b7e6, #9b59b6);
+  background: #FFF;
 }
 
 #board-wrapper #button-wrapper button i {
-  color: white;
+  color: linear-gradient(135deg, #71b7e6, #9b59b6);
 }
 
 #board-wrapper.show {
@@ -255,9 +256,10 @@ body {
 }
 
 .winner-board-wrapper {
+  border-radius: 0.3vw;
   height: 20vh;
   width: 30vw;
-  background: yellow;
+  background: #FFF;
   position: absolute;
   left: 50%;
   top: 50%;
@@ -281,6 +283,17 @@ body {
   -webkit-transition: all 0.3s ease;
   transition: all 0.3s ease;
   opacity: 0;
+}
+
+.winner-board-wrapper .winner-header {
+  text-transform: uppercase;
+  padding: 1vw;
+  font-size: 2vw;
+}
+
+.winner-board-wrapper #review-button {
+  height: 5vh;
+  width: 10vw;
 }
 
 .winner-board-wrapper.show {
